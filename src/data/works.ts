@@ -173,11 +173,15 @@ export const works: Work[] = [
   },
   {
     slug: 'jester-cat',
-    title: '小丑貓｜角色設計',
+    title: '小丑貓 IP｜角色設計',
     category: 'illustration',
-    summary: '小丑貓的角色設定圖，含線稿草圖與三個不同姿態與表情。',
-    tags: ['Character', 'Illustration'],
-    images: [{ src: '/works/jester-cat.jpg', alt: '小丑貓角色設定圖：灰黑拼布帽與紅色鞋子，三個姿態與一張草稿', w: 1300, h: 1662 }],
+    summary: '小丑貓的角色 IP：設定圖、線稿與大頭圖。設定圖含線稿草圖，以及三個不同的姿態與表情。',
+    tags: ['Character', 'IP', 'Illustration'],
+    images: [
+      { src: '/works/jester-cat.jpg', alt: '小丑貓角色設定圖：灰黑拼布帽與紅色鞋子，三個姿態與一張草稿', w: 1300, h: 1662 },
+      { src: '/works/jester-line.jpg', alt: '小丑貓線稿：戴著星星拼布帽的貓在空中跳躍，旁邊飄著幾顆圓球', w: 1200, h: 1200 },
+      { src: '/works/jester-icon.jpg', alt: '小丑貓大頭圖：閉著眼微笑，拼布帽左淺灰右深灰，帽上有米黃與暗紅星星', w: 1000, h: 1333 },
+    ],
   },
 ];
 

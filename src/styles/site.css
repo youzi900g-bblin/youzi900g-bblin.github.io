@@ -267,3 +267,9 @@ a { text-decoration-color: var(--color-accent); }
   .bw { padding-bottom: var(--section-gap-s); }
 }
 @media (max-width: 40rem) { .bw__grid { gap: var(--space-xs); } }
+
+/* faint line-art on home story */
+.story { position: relative; overflow: clip; }
+.story .container { position: relative; z-index: var(--z-base); }
+.story__cat { position: absolute; right: max(3vw, 16px); bottom: -2%; width: min(30vw, 400px); height: auto; opacity: 0.08; rotate: -5deg; pointer-events: none; }
+@media (max-width: 40rem) { .story__cat { display: none; } }
