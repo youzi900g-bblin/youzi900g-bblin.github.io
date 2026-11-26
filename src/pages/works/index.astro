@@ -15,6 +15,7 @@ const counts = Object.fromEntries(categories.map((c) => [c.id, c.id === 'all' ? 
           <button type="button" class="chipbtn" data-filter={c.id} aria-pressed={c.id === 'all' ? 'true' : 'false'}><Icon name={c.id} size={18} />{c.label}<span class="chipbtn__n">{counts[c.id]}</span></button>
         ))}
       </div>
+      <p class="muted filter-hint">插畫＝數位繪製；手繪＝紙本（鉛筆、色鉛筆、水彩、麥克筆）。</p>
       <p class="muted" id="count" aria-live="polite">共 {works.length} 件</p>
     </div>
   </section>
@@ -26,7 +27,7 @@ const counts = Object.fromEntries(categories.map((c) => [c.id, c.id === 'all' ? 
           <li class="wcard" data-cat={w.category}>
             <a href={`/works/${w.slug}/`}>
               <span class="wcard__img">
-                <img src={`/works/tiles/${w.slug}.jpg`} alt="" loading={i < 6 ? 'eager' : 'lazy'} width="1200" height="900" />
+                <img src={`/works/tiles/${w.slug}.jpg`} alt="" loading={i < 6 ? 'eager' : 'lazy'} width="960" height="720" />
                 <span class="wcard__badge"><Icon name={w.category} size={18} /><span class="visually-hidden">{categoryLabel(w.category)}</span></span>
               </span>
               <span class="wcard__body">

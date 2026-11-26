@@ -48,6 +48,17 @@ import { bySlug } from '../../data/works';
     </div>
   </section>
 
+  <section class="section" id="awards">
+    <div class="container">
+      <div class="head"><h2>Award</h2><span class="cjk">獎項</span><Sparkle class="spark spark--head" size={22} /></div>
+      <ul class="awards">
+        {profile.awards.map((a) => (
+          <li><span class="awards__year">{a.year}</span><span><strong>{a.title}</strong><br /><span class="muted">{a.note}</span></span><a class="btn btn--ink" href={`/works/${a.work}/`}>看得獎作品</a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
   <section class="section on-ink" id="skills">
     <div class="container">
       <div class="head"><h2>Skills</h2><span class="cjk">能力與證照</span><Sparkle class="spark spark--head" size={22} /></div>

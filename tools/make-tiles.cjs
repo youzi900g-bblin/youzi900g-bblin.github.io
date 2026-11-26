@@ -43,7 +43,6 @@ linear-gradient(var(--m),var(--m)) 100% calc(100% - var(--o))/var(--l) 2px no-re
 .grain{position:absolute;inset:0;opacity:.22;mix-blend-mode:overlay;pointer-events:none}
 </style></head><body>
 <div class="dots"></div>
-<div class="num">${String(i + 1).padStart(2, '0')}</div>
 ${sparks}
 <div class="stage"><div class="sheet"><img src="file://${path.join(root, 'public', w.img)}"></div></div>
 <svg class="grain" width="1200" height="900"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="${i + 3}"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 1.4 -.2"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>

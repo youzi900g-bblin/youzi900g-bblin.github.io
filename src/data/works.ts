@@ -10,6 +10,9 @@ export interface Work {
   tags: string[];
   images: WorkImage[];
   links?: { label: string; href: string }[];
+  year?: string;   // 年份（有才顯示）
+  role?: string;   // 負責項目
+  tools?: string;  // 使用工具
 }
 
 export const categories: { id: 'all' | Category; label: string }[] = [
@@ -253,6 +256,7 @@ export const works: Work[] = [
   },
   {
     slug: 'sleepless',
+    year: '2024',
     title: '不眠樂｜sleepless',
     category: 'graphic',
     summary: '虛構音樂品牌「不眠樂」的 CD 專輯包裝與品牌識別（2024）。黑與紫是主色；圖形從 A、B、C 三個發想挑出 A-08，延伸成重複的紋樣，用在光碟、盒封與面具上。版面也整理了品牌理念、色彩靈感與圖形發想。',
@@ -362,6 +366,7 @@ export const works: Work[] = [
   },
   {
     slug: 'suffocation',
+    year: '2023',
     title: '窒息｜封面插畫',
     category: 'illustration',
     summary: '2023 年個人作品集《窒息 suffocation》的封面插畫。水中的女孩被紫藍色的光網包圍，封底是深藍的水下，有一個潛水者的剪影。',
@@ -373,6 +378,7 @@ export const works: Work[] = [
   },
   {
     slug: 'ioaf-2021',
+    year: '2021',
     title: '海洋藝術節｜Special Award',
     category: 'illustration',
     summary: '2021 年 IOAF 國際海洋藝術節（Art Star Awards）的 Special Award。作品有兩張：把海洋畫成心臟的「OCEAN is our heart.」，以及以線稿描繪海中人形的「THEIR FUTURE? OUR FUTURE.」。',
@@ -414,5 +420,5 @@ export const works: Work[] = [
   },
 ];
 
-export const featuredSlugs = ['stock-comeback', 'range-rover-video', 'illustration', 'infection', 'xmas-wonderland', 'ugly-doll'];
+export const featuredSlugs = ['ioaf-2021', 'suffocation', 'yue-rong', 'night-falls', 'stock-comeback', 'sketch-portrait'];
 export const bySlug = (s: string) => works.find((w) => w.slug === s)!;

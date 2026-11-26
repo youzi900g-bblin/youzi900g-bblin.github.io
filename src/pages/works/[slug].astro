@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 import { works, categoryLabel } from '../../data/works';
+import { profile } from '../../data/profile';
 
 export function getStaticPaths() {
   return works.map((w, i) => ({
@@ -27,6 +28,13 @@ const [mainTitle, subTitle] = work.title.split('｜');
             {subTitle && <span class="detail__sub">{subTitle}</span>}
           </h1>
           <p class="lead">{work.summary}</p>
+          {(work.year || work.role || work.tools) && (
+            <dl class="meta">
+              {work.year && <div><dt>年份</dt><dd>{work.year}</dd></div>}
+              {work.role && <div><dt>負責</dt><dd>{work.role}</dd></div>}
+              {work.tools && <div><dt>工具</dt><dd>{work.tools}</dd></div>}
+            </dl>
+          )}
           <ul class="tags" aria-label="使用技能與關鍵字">
             {work.tags.map((t) => <li>{t}</li>)}
           </ul>
@@ -35,6 +43,10 @@ const [mainTitle, subTitle] = work.title.split('｜');
               {work.links.map((l) => <a class="btn btn--fill" href={l.href} target="_blank" rel="noopener">{l.label}<span class="visually-hidden">（在新分頁開啟）</span></a>)}
             </div>
           )}
+          <aside class="byline" aria-label="作者與合作">
+            <p>{profile.name}　<span class="muted">接案、合作歡迎來信</span></p>
+            <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          </aside>
         </div>
         <div class="detail__media">
           {work.images.map((im, i) => (
