@@ -2,7 +2,7 @@
 export const profile = {
   name: '林湘儀',
   title: '視覺設計師｜平面・字體・影音',
-  tagline: '我是林湘儀，做平面設計、字體設計和影片剪輯。',
+  tagline: '我是林湘儀，從事平面設計、字體設計與影片剪輯。',
   email: 'youzi900g@gmail.com',
   phone: '0933-212-386',
   skills: [
@@ -12,7 +12,7 @@ export const profile = {
     { group: 'AI', items: ['ChatGPT', 'Midjourney', 'AI 圖像 / 影片 / 文案'] },
   ],
   education: [
-    { school: '國立台灣師範大學 設計系 平面設計組', note: '大四休學中｜因家庭因素需要自己負擔生活開銷，所以休學工作，計畫之後回學校完成學業。' },
+    { school: '國立台灣師範大學 設計系 平面設計組', note: '大四休學中｜因家庭因素須自行負擔生活開銷，目前休學工作，並計畫日後返校完成學業。' },
     { school: '二信高中 廣告設計科', note: '畢業' },
   ],
   certifications: ['視覺傳達設計丙級技術士', '印前製程 圖文組版 PC 丙級'],
