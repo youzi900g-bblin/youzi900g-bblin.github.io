@@ -83,7 +83,7 @@ export const works: Work[] = [
   {
     slug: 'vertical-type-poster',
     title: '字體海報｜你會不會和我一樣',
-    category: 'type',
+    category: 'graphic',
     summary: '直排字體海報。三行直排的句子是「你會不會和我一樣，覺得自己最多就是這樣，把希望寄託在別人的身上」，黑色粗體字壓在灰色漸層上。',
     tags: ['Chinese Typography', 'Poster', 'Layout'],
     images: [{ src: '/works/type-poster.jpg', alt: '中文直排字體海報，文字為「你會不會和我一樣」', w: 845, h: 1463 }],
@@ -167,7 +167,7 @@ export const works: Work[] = [
   {
     slug: 'sun-still-rises',
     title: '太陽照常升起｜文字設計海報',
-    category: 'type',
+    category: 'graphic',
     summary: '文字海報。「太陽照常升起」用手寫風格的字體，下方是「請往前走，不要在此停留」，中間是紅色的圓，背景由藍漸層到橘，英文是 May the flowers bloom again.',
     tags: ['Lettering', 'Chinese Typography', 'Poster'],
     images: [{ src: '/works/sun-poster.jpg', alt: '太陽照常升起文字設計海報：藍天與紅日漸層上的白色手寫字', w: 1100, h: 1555 }],
@@ -377,7 +377,7 @@ export const works: Work[] = [
     slug: 'ioaf-2021',
     year: '2021',
     title: '海洋藝術節｜Special Award',
-    category: 'illustration',
+    category: 'graphic',
     summary: '2021 年 IOAF 國際海洋藝術節（Art Star Awards）的 Special Award 得獎作品。青綠色的海底有用線稿畫成的人形，眼角掛著一滴淚，上下兩行字是 THEIR FUTURE? 與 OUR FUTURE.，後面附上證書。',
     tags: ['Award', 'Poster', 'Ocean'],
     images: [
@@ -388,7 +388,7 @@ export const works: Work[] = [
   {
     slug: 'ocean-heart',
     title: 'OCEAN is our heart.｜海洋心臟海報',
-    category: 'illustration',
+    category: 'graphic',
     summary: '藍色海報。心臟的輪廓由海浪和魚群組成，紅與深藍的色塊疊在淺藍的水面上，左下角寫著 OCEAN is our heart.',
     tags: ['Poster', 'Ocean', 'Illustration'],
     images: [

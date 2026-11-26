@@ -30,6 +30,7 @@ const site = 'https://youzi900g-bblin.github.io';
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap" rel="stylesheet" />
+    <script is:inline>document.documentElement.classList.add('js')</script>
   </head>
   <body>
     <a class="skip" href="#main">跳到主要內容</a>
@@ -45,6 +46,23 @@ const site = 'https://youzi900g-bblin.github.io';
     </header>
     <main id="main"><slot /></main>
     <Footer />
+    <script>
+      // 捲動顯現：進入畫面時淡入並上移一點；減少動態設定下完全不啟用
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+        const items = document.querySelectorAll<HTMLElement>('.print, .wcard, .step, .fact, .detail__media .sheet, .awards li, .me-photos > *, .bw__grid > *');
+        items.forEach((el) => el.classList.add('reveal'));
+        const io = new IntersectionObserver((entries) => {
+          let k = 0;
+          entries.forEach((e) => {
+            if (!e.isIntersecting) return;
+            (e.target as HTMLElement).style.transitionDelay = `${Math.min(k++, 4) * 70}ms`;
+            e.target.classList.add('is-in');
+            io.unobserve(e.target);
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+        items.forEach((el) => io.observe(el));
+      }
+    </script>
   </body>
 </html>
 

@@ -51,7 +51,7 @@ const counts = Object.fromEntries(categories.map((c) => [c.id, c.id === 'all' ? 
   const count = document.getElementById('count');
   function apply(id: string) {
     let n = 0;
-    cards.forEach((c) => { const show = id === 'all' || c.dataset.cat === id; c.hidden = !show; if (show) n++; });
+    cards.forEach((c) => { const show = id === 'all' || c.dataset.cat === id; c.hidden = !show; if (show) { n++; c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop'); } });
     buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filter === id)));
     if (count) count.textContent = `共 ${n} 件`;
     history.replaceState(null, '', id === 'all' ? location.pathname : `#${id}`);
