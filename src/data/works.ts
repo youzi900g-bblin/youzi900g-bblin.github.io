@@ -50,7 +50,7 @@ const raw: Work[] = [
     slug: 'bringing-visuals-into-motion',
     title: '手繪動畫｜Bringing Visuals Into Motion',
     category: 'video',
-    summary: '我獨立製作的手繪動畫短片，用 After Effects 剪成。畫面有線稿人物、一雙眼睛，和一隻握著綠色圓環的手。',
+    summary: '我獨立製作的手書剪輯：用歌曲的意象搭配手繪畫面，詮釋一部小說的故事情節，用 After Effects 剪成。畫面有線稿人物、一雙眼睛，和一隻握著綠色圓環的手。',
     tags: ['Hand-drawn', 'After Effects', 'Editing'],
     images: [{ src: '/works/motion.jpg', alt: '手繪的人物與角色草稿，用於 After Effects 動畫', w: 1400, h: 1280 }],
     links: [{ label: '觀看影片', href: 'https://youtu.be/att5Oh_z01g' }],
