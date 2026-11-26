@@ -1,6 +1,6 @@
 // 作品資料：文字全部取自「Portfolio」作品集，沒有另外編寫。
 // 要新增或修改作品，只要改這個檔案；圖片放在 public/works/。
-export type Category = 'illustration' | 'graphic' | 'type' | 'video' | 'game' | 'editorial';
+export type Category = 'illustration' | 'handdrawn' | 'graphic' | 'type' | 'video' | 'game' | 'editorial';
 export interface WorkImage { src: string; alt: string; w: number; h: number }
 export interface Work {
   slug: string;
@@ -15,6 +15,7 @@ export interface Work {
 export const categories: { id: 'all' | Category; label: string }[] = [
   { id: 'all', label: '全部' },
   { id: 'illustration', label: '插畫' },
+  { id: 'handdrawn', label: '手繪' },
   { id: 'graphic', label: '平面設計' },
   { id: 'type', label: '字體設計' },
   { id: 'video', label: '影音動態' },
@@ -239,6 +240,111 @@ export const works: Work[] = [
     summary: '手繪的生日賀卡：一對情侶，女孩抱著綠色小熊，蛋糕上點著蠟燭。',
     tags: ['Card', 'Portrait', 'Illustration'],
     images: [{ src: '/works/birthday.jpg', alt: 'Happy Birthday 賀卡插畫：女孩抱著綠色小熊，男孩伸手輕點她的臉頰', w: 1200, h: 1800 }],
+  },
+  {
+    slug: 'night-falls',
+    title: '夜幕｜Night Falls',
+    category: 'graphic',
+    summary: '品牌設計課的作業。以黑與銀灰為基調，標誌是蝙蝠翅膀與側臉疊成的輪廓，並延伸到名片、筆記本、信封與蠟封章、購物提袋與筆記本等應用。',
+    tags: ['Brand Identity', 'Logo', 'Stationery'],
+    images: [
+      { src: '/works/nightfalls.jpg', alt: '夜幕 Night Falls 品牌海報：墨水瓶與羽毛筆，下方是名片、筆記本、蠟封章信封與提袋', w: 1190, h: 1700 },
+    ],
+  },
+  {
+    slug: 'sleepless',
+    title: '不眠樂｜sleepless',
+    category: 'graphic',
+    summary: '虛構音樂品牌「不眠樂」的 CD 專輯包裝與品牌識別（2024）。黑與紫是主色；圖形從 A、B、C 三個發想挑出 A-08，延伸成重複的紋樣，用在光碟、盒封與面具上。版面也整理了品牌理念、色彩靈感與圖形發想。',
+    tags: ['Brand Identity', 'Packaging', 'Pattern'],
+    images: [
+      { src: '/works/sleepless.jpg', alt: '不眠樂 sleepless 的 CD 包裝海報：紫色紋樣的光碟與盒封、貓面具、色票與圖形發想', w: 1202, h: 1700 },
+    ],
+  },
+  {
+    slug: 'ocean-not-bin',
+    title: '海洋≠回收桶｜環保海報',
+    category: 'graphic',
+    summary: '環保主題的海報。回收桶被畫成裝滿海水的透明桶子，裡面有珊瑚、魚與海星；背景是漂浮垃圾的線稿，下方標語是「海洋≠回收桶」。',
+    tags: ['Poster', 'Illustration', 'Environmental'],
+    images: [
+      { src: '/works/ocean.jpg', alt: '海洋≠回收桶海報：藍色水桶形狀的海水，裡面有珊瑚與魚，上方落下一個玻璃瓶', w: 1060, h: 1500 },
+    ],
+  },
+  {
+    slug: 'yue-rong',
+    title: '悅容｜楊玉環 Q 版角色 IP',
+    category: 'graphic',
+    summary: '高中專題。以古代人物為題的仿古 Q 版角色 IP，設定為化妝品品牌。展桌上有黏土公仔、壓克力立牌、識別證套、名片、圓形鐵盒與扇形包裝等周邊，旁邊的說明板整理了標準字、色票與角色設定。',
+    tags: ['Character IP', 'Packaging', 'Brand Identity'],
+    images: [
+      { src: '/works/yuerong.jpg', alt: '悅容展桌：黏土公仔、壓克力立牌、名片、圓形鐵盒與扇形包裝，背後立著說明板', w: 1125, h: 1500 },
+    ],
+  },
+  {
+    slug: 'colored-pencil',
+    title: '色鉛筆｜昆蟲、花與面部',
+    category: 'handdrawn',
+    summary: '高中時期的色鉛筆習作：瓢蟲、鳳蝶與紫色繡球花，以及只留眼睛與嘴唇的面部局部。',
+    tags: ['Colored Pencil', 'Realism', 'Study'],
+    images: [
+      { src: '/works/hd-ladybug.jpg', alt: '色鉛筆繪製的瓢蟲，停在綠色松針上', w: 1500, h: 959 },
+      { src: '/works/hd-butterfly.jpg', alt: '色鉛筆繪製的鳳蝶，停在紫色小花上', w: 1500, h: 956 },
+      { src: '/works/hd-hydrangea.jpg', alt: '色鉛筆繪製的紫色繡球花', w: 929, h: 1500 },
+      { src: '/works/hd-eyelip.jpg', alt: '色鉛筆繪製的一隻藍色眼睛與紅色嘴唇', w: 1087, h: 1500 },
+    ],
+  },
+  {
+    slug: 'sketch-still-life',
+    title: '鉛筆素描｜靜物',
+    category: 'handdrawn',
+    summary: '高中時期的鉛筆素描靜物：瓶罐與玻璃、腳踏車，以及楊桃與小果實。',
+    tags: ['Pencil', 'Still Life', 'Study'],
+    images: [
+      { src: '/works/hd-still-life.jpg', alt: '鉛筆素描靜物：軟管、噴霧瓶、水瓶、玻璃珠與網狀布', w: 796, h: 1173 },
+      { src: '/works/hd-bike.jpg', alt: '鉛筆素描的腳踏車', w: 1444, h: 1012 },
+      { src: '/works/hd-starfruit.jpg', alt: '鉛筆素描的楊桃與一顆小果實', w: 1083, h: 1500 },
+    ],
+  },
+  {
+    slug: 'sketch-portrait',
+    title: '鉛筆素描｜人像與動物',
+    category: 'handdrawn',
+    summary: '高中時期的鉛筆素描人像與動物：捲髮女孩、長髮女孩、留鬍子的老先生，以及套著繩籠頭的牛。',
+    tags: ['Pencil', 'Portrait', 'Study'],
+    images: [
+      { src: '/works/hd-girl-curly.jpg', alt: '鉛筆素描：穿著拼色上衣的捲髮女孩', w: 1165, h: 1500 },
+      { src: '/works/hd-girl-long.jpg', alt: '鉛筆素描：長髮女孩的正面肖像', w: 1050, h: 1500 },
+      { src: '/works/hd-old-man.jpg', alt: '鉛筆素描：留鬍子的老先生', w: 1125, h: 1500 },
+      { src: '/works/hd-cow.jpg', alt: '鉛筆素描：套著繩籠頭的牛', w: 1125, h: 1500 },
+    ],
+  },
+  {
+    slug: 'watercolor',
+    title: '水彩習作',
+    category: 'handdrawn',
+    summary: '高中時期的水彩習作：紅色飲料的高腳杯、漢堡與薯條、兩個玻璃杯，以及戴著條紋帽的小鳥。',
+    tags: ['Watercolor', 'Still Life', 'Study'],
+    images: [
+      { src: '/works/wc-wine.jpg', alt: '水彩：裝著紅色飲料的高腳杯，背景是藍綠色暈染', w: 1083, h: 1500 },
+      { src: '/works/wc-burger.jpg', alt: '水彩：漢堡與薯條', w: 964, h: 1500 },
+      { src: '/works/wc-glasses.jpg', alt: '水彩：兩個藍色透明玻璃杯', w: 964, h: 1500 },
+      { src: '/works/wc-bird.jpg', alt: '水彩：戴著紫黃條紋帽與圍巾的小鳥，站在松枝與鈴鐺上', w: 1084, h: 1500 },
+    ],
+  },
+  {
+    slug: 'characters',
+    title: '角色人像',
+    category: 'illustration',
+    summary: '數位繪製的角色人像：戴眼鏡的女孩、金髮微笑的男子、抱著兔子的生日賀圖，以及藍色挑染與額頭有疤的男子。',
+    tags: ['Character', 'Portrait', 'Digital Painting'],
+    images: [
+      { src: '/works/girl-glasses.jpg', alt: '紫粉色調插畫：戴透明框眼鏡、綁低髮髻的女孩，簽名日期 2023/11/26', w: 990, h: 1400 },
+      { src: '/works/char-blond.jpg', alt: '綠色背景前，金髮留鬍子的男子笑著', w: 1126, h: 1400 },
+      { src: '/works/char-birthday.jpg', alt: '藍色背景的生日賀圖：男子抱著一隻棕色兔子，寫著 Happy Birthday', w: 1191, h: 1375 },
+      { src: '/works/char-blue.jpg', alt: '藍色挑染黑髮的男子，微笑並歪著頭', w: 1400, h: 1400 },
+      { src: '/works/char-scar.jpg', alt: '額頭有疤的黑髮男子，穿白襯衫與棕色外套', w: 1400, h: 1400 },
+    ],
   },
 ];
 
