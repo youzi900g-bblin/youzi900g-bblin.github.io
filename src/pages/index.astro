@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { profile } from '../data/profile';
+---
+<Layout>
+  <section class="hero">
+    <p class="role">{profile.title}</p>
+    <h1>{profile.name}</h1>
+    <p class="tagline">{profile.tagline}</p>
+    </section>
+
+  <section id="about">
+    <h2>關於我</h2>
+    {profile.about.map((p) => <p>{p}</p>)}
+  </section>
+
+  <section id="projects">
+    <h2>作品</h2>
+    <div class="grid">
+      {profile.projects.map((p) => (
+        <a class="card" href={p.href} target="_blank" rel="noopener">
+          <h3>{p.title}</h3>
+          <p>{p.description}</p>
+          <ul class="tags">{p.tags.map((t) => <li>{t}</li>)}</ul>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>經歷</h2>
+    <ol class="timeline">
+      {profile.experience.map((e) => (
+        <li>
+          <span class="period">{e.period}</span>
+          <div><strong>{e.role}</strong>・{e.org}<p>{e.summary}</p></div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section id="skills">
+    <h2>技能</h2>
+    {profile.skills.map((g) => (
+      <div class="skill-row"><span class="period">{g.group}</span><ul class="tags">{g.items.map((i) => <li>{i}</li>)}</ul></div>
+    ))}
+  </section>
+
+  <section id="education">
+    <h2>學歷、證照與語言</h2>
+    {profile.education.map((e) => <p><strong>{e.school}</strong>・{e.note}</p>)}
+    <p>{profile.certifications.join('、')}</p>
+    <p>{profile.languages.join('　')}</p>
+  </section>
+
+  <section id="contact">
+    <h2>聯絡</h2>
+    <p><a href={`mailto:${profile.email}`}>{profile.email}</a></p>
+    {profile.links.length > 0 && <p class="links">{profile.links.map((l) => <a href={l.href} rel="noopener" target="_blank">{l.label}</a>)}</p>}
+  </section>
+</Layout>
+
+<style>
+  .hero { border-top: none; padding-top: 2rem; }
+  .role { color: var(--accent); font-weight: 600; margin: 0; }
+  .tagline { font-size: 1.15rem; color: var(--muted); margin: 0 0 1rem; }
+  .skills, .tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+  .skills li, .tags li { font-size: .8rem; padding: .15rem .65rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+  .grid { display: grid; gap: 1rem; }
+  .card { display: block; padding: 1.25rem; background: var(--card); border: 1px solid var(--line); border-radius: 12px; color: inherit; text-decoration: none; transition: transform .15s, border-color .15s; }
+  .card:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .card h3 { margin: 0 0 .25rem; }
+  .card p { margin: 0 0 .75rem; color: var(--muted); }
+  .timeline { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.25rem; }
+  .timeline li { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; }
+  .timeline p { margin: .15rem 0 0; color: var(--muted); }
+  .period { color: var(--muted); font-size: .9rem; }
+  .skill-row { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; margin-bottom: .75rem; }
+  .links { display: flex; gap: 1.25rem; }
+  @media (max-width: 560px) { .timeline li { grid-template-columns: 1fr; gap: .15rem; } }
+</style>
