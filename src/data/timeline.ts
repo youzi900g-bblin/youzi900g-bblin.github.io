@@ -9,7 +9,7 @@ export interface Step {
 }
 
 export const timeline: Step[] = [
-  { period: '從小', title: '接觸繪畫', note: '從小就喜歡畫畫，後來進入設計領域。', icon: 'pencil', work: 'illustration' },
+  { period: '從小', title: '接觸繪畫', note: '自幼喜歡繪畫，後來進入設計領域。', icon: 'pencil', work: 'illustration' },
   { period: '2019 – 2023', title: '廣告設計科', place: '基隆私立二信高級中學', note: '從這個階段開始接觸視覺設計。', icon: 'school', work: 'yue-rong' },
   { period: '2023 –', title: '設計系 平面設計組', place: '國立台灣師範大學（大四休學中）', note: '大四時因家庭因素，我必須自行負擔生活開銷，因此選擇休學工作。目前計畫日後返校，完成學業。', icon: 'compass', work: 'dead-line' },
   { period: '2024/2 – 2025/6', title: '繪畫助教', place: '星期六畫室', note: '教學時自行編排教案，帶領 2 到 10 人的小班。', icon: 'easel', work: 'sketch-portrait' },
