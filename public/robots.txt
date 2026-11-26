@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://youzi900g-bblin.github.io/sitemap-index.xml

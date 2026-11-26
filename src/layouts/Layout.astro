@@ -1,4 +1,9 @@
 ---
+import '@fontsource/gloock/400.css';
+import '@fontsource/noto-sans-tc/400.css';
+import '@fontsource/noto-sans-tc/500.css';
+import '@fontsource/noto-sans-tc/700.css';
+import '@fontsource/noto-serif-tc/900.css';
 import '../styles/site.css';
 import Footer from '../components/Footer.astro';
 import { profile } from '../data/profile';
@@ -15,6 +20,7 @@ const site = 'https://youzi900g-bblin.github.io';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(path, site).href} />
     <title>{pageTitle}</title>
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
@@ -27,9 +33,6 @@ const site = 'https://youzi900g-bblin.github.io';
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap" rel="stylesheet" />
     <script is:inline>document.documentElement.classList.add('js')</script>
   </head>
   <body>

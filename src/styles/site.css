@@ -133,7 +133,7 @@ a { text-decoration-color: var(--color-accent); }
 
 /* work detail */
 .crumbs { display: flex; gap: var(--space-xs); align-items: center; margin-bottom: var(--space-xl); font-size: var(--text-sm); color: var(--color-muted); }
-.crumbs a { color: var(--color-ink); }
+.crumbs a { color: var(--color-ink); display: inline-block; padding: 0.55rem 0.4rem; margin: -0.55rem -0.4rem; }
 .detail__grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--space-2xl) var(--space-3xl); align-items: start; }
 .detail__text { position: sticky; top: var(--space-xl); }
 .detail__cat { display: flex; align-items: center; gap: var(--space-xs); margin-bottom: var(--space-md); font-size: var(--text-sm); color: var(--color-muted); font-variant-numeric: tabular-nums; }
