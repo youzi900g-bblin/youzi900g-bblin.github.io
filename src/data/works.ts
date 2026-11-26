@@ -278,7 +278,7 @@ export const works: Work[] = [
     summary: '高中專題。以古代人物為題的仿古 Q 版角色 IP，設定為化妝品品牌。展桌上有黏土公仔、壓克力立牌、識別證套、名片、圓形鐵盒與扇形包裝等周邊，旁邊的說明板整理了標準字、色票與角色設定。',
     tags: ['Character IP', 'Packaging', 'Brand Identity'],
     images: [
-      { src: '/works/yuerong.jpg', alt: '悅容展桌：黏土公仔、壓克力立牌、識別證套、名片、圓形鐵盒與扇形包裝，後方是說明板', w: 1045, h: 830 },
+      { src: '/works/yuerong.jpg', alt: '悅容展桌：黏土公仔、壓克力立牌、識別證套、名片、圓形鐵盒與扇形包裝，後方是說明板', w: 1035, h: 943 },
     ],
   },
   {
