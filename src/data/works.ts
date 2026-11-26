@@ -301,8 +301,8 @@ export const works: Work[] = [
     summary: '高中時期的鉛筆素描靜物：瓶罐與玻璃、腳踏車，以及楊桃與小果實。',
     tags: ['Pencil', 'Still Life', 'Study'],
     images: [
-      { src: '/works/hd-still-life.jpg', alt: '鉛筆素描靜物：軟管、噴霧瓶、水瓶、玻璃珠與網狀布', w: 782, h: 1075 },
-      { src: '/works/hd-bike.jpg', alt: '鉛筆素描的腳踏車', w: 1416, h: 937 },
+      { src: '/works/hd-still-life.jpg', alt: '鉛筆素描靜物：軟管、噴霧瓶、水瓶、玻璃珠與網狀布', w: 744, h: 1023 },
+      { src: '/works/hd-bike.jpg', alt: '鉛筆素描的腳踏車', w: 1360, h: 901 },
       { src: '/works/hd-starfruit.jpg', alt: '鉛筆素描的楊桃與一顆小果實', w: 1083, h: 1500 },
     ],
   },
@@ -313,10 +313,10 @@ export const works: Work[] = [
     summary: '高中時期的鉛筆素描人像與動物：捲髮女孩、長髮女孩、留鬍子的老先生，以及套著繩籠頭的牛。',
     tags: ['Pencil', 'Portrait', 'Study'],
     images: [
-      { src: '/works/hd-girl-curly.jpg', alt: '鉛筆素描：穿著拼色上衣的捲髮女孩', w: 1143, h: 1470 },
+      { src: '/works/hd-girl-curly.jpg', alt: '鉛筆素描：穿著拼色上衣的捲髮女孩', w: 1075, h: 1382 },
       { src: '/works/hd-girl-long.jpg', alt: '鉛筆素描：長髮女孩的正面肖像', w: 1030, h: 1470 },
-      { src: '/works/hd-old-man.jpg', alt: '鉛筆素描：留鬍子的老先生', w: 1103, h: 1470 },
-      { src: '/works/hd-cow.jpg', alt: '鉛筆素描：套著繩籠頭的牛', w: 1103, h: 1470 },
+      { src: '/works/hd-old-man.jpg', alt: '鉛筆素描：留鬍子的老先生', w: 1027, h: 1419 },
+      { src: '/works/hd-cow.jpg', alt: '鉛筆素描：套著繩籠頭的牛', w: 1015, h: 1412 },
     ],
   },
   {
