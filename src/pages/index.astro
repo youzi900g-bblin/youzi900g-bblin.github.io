@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Sparkle from '../components/Sparkle.astro';
 import { profile } from '../data/profile';
-import { works, listedWorks, featuredSlugs, bySlug, categoryLabel } from '../data/works';
+import { listedWorks, featuredSlugs, bySlug, categoryLabel } from '../data/works';
 import { timeline } from '../data/timeline';
 const pad = (n: number) => String(n).padStart(2, '0');
 const featured = featuredSlugs.map(bySlug);
@@ -40,7 +40,7 @@ const path = [timeline[0], timeline[1], timeline[2], timeline[4], timeline[5]];
             <a href={`/works/${w.slug}/`}>
               <figure class="sheet"><img src={w.images[0].src} alt={w.images[0].alt} loading={i < 2 ? 'eager' : 'lazy'} width={w.images[0].w} height={w.images[0].h} /></figure>
               <div class="note">
-                <span class="num">{pad(works.indexOf(w) + 1)}</span>
+                <span class="num">{pad(i + 1)}</span>
                 <h3>{w.title.replace('｜', '｜​')}</h3>
                 <p class="muted">{categoryLabel(w.category)}</p>
               </div>
