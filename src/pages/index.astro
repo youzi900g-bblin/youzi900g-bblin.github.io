@@ -4,52 +4,70 @@ import { profile } from '../data/profile';
 const pad = (n: number) => String(n).padStart(2, '0');
 ---
 <Layout>
-  <section class="hero">
-    <div class="container hero__grid">
-      <div>
-        <h1>{profile.name}</h1>
+  <section class="hero on-ink" aria-label="首頁">
+    <span class="hero__edge">Portfolio, November 2026</span>
+    <figure class="hero__photo">
+      <img src="/works/portrait-duo.jpg" alt="林湘儀的自畫像插畫" width="1080" height="780" />
+    </figure>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <h1 aria-label="Lin Xiang Yi 林湘儀">
+          <span class="line">Lin <span class="chip">X</span>iang</span>
+          <span class="line">Yi<span class="cjk">林湘儀</span></span>
+        </h1>
         <p class="lead">{profile.tagline}</p>
         <div class="actions">
-          <a class="btn btn--ink" href="#works">看作品</a>
+          <a class="btn btn--fill" href="#works">看作品</a>
           <a class="btn" href={`mailto:${profile.email}`}>寄信給我</a>
         </div>
       </div>
-      <figure class="frame" style="margin:0">
-        <img src="/works/portrait.jpg" alt="林湘儀的自畫像插畫" width="1040" height="770" />
-      </figure>
     </div>
   </section>
 
   <section class="section" id="works">
     <div class="container">
-      <div class="section__head"><h2>作品</h2><span class="muted">{profile.projects.length} 件</span></div>
-      <div class="cells">
+      <div class="head"><h2>Works</h2><span class="cjk">作品</span></div>
+      <div class="prints">
         {profile.projects.map((p, i) => (
-          <a class:list={['cell', i === 0 && 'cell--lead']} href={p.href} target="_blank" rel="noopener">
-            {p.image && <span class="cell__img"><img src={p.image} alt={p.title} loading={i < 2 ? 'eager' : 'lazy'} width="1600" height="900" /></span>}
-            <span class="cell__body">
-              <span class="cell__num">{pad(i + 1)}</span>
-              <h3>{p.title}</h3>
-              <span>{p.description}</span>
-              <span class="muted">{p.tags.join('、')}</span>
-            </span>
-          </a>
+          <article class="print">
+            <a href={p.href} target="_blank" rel="noopener">
+              <span class="visually-hidden">開啟作品：</span>
+              {p.image && <figure class="sheet"><img src={p.image} alt={p.title} loading={i < 2 ? 'eager' : 'lazy'} width={p.imageSize?.[0]} height={p.imageSize?.[1]} /></figure>}
+              <div class="note">
+                <span class="num">{pad(i + 1)}</span>
+                <h3>{p.title.replace('｜', '｜\u200b')}</h3>
+                <p>{p.description}</p>
+                <p class="muted">{p.tags.join('、')}</p>
+              </div>
+            </a>
+          </article>
         ))}
       </div>
     </div>
   </section>
 
-  <section class="section band--ink" id="about">
+  <section class="statement on-ink" aria-label="設計觀">
+    <div class="container">
+      <div class="statement__side">
+        <span class="plus" aria-hidden="true"></span>
+        <span class="muted">作品集自述</span>
+      </div>
+      <p class="vertical">設計不只是<br />把畫面做好看，</p>
+      <p class="vertical">更重要的是<br />如何抓住受眾的注意力。</p>
+    </div>
+  </section>
+
+  <section class="section" id="about">
     <div class="container about">
-      <h2>關於我</h2>
+      <div class="head" style="margin:0"><h2>About</h2><span class="cjk">關於我</span></div>
       <div>{profile.about.map((t) => <p>{t}</p>)}</div>
     </div>
   </section>
 
-  <section class="section" id="experience">
+  <section class="section on-ink" id="experience">
     <div class="container">
-      <div class="section__head"><h2>經歷</h2></div>
-      <div class="table">
+      <div class="head"><h2>Experience</h2><span class="cjk">經歷</span></div>
+      <div class="rows">
         {profile.experience.map((e) => (
           <div class="row">
             <div class="row__period">{e.period}</div>
@@ -61,38 +79,26 @@ const pad = (n: number) => String(n).padStart(2, '0');
     </div>
   </section>
 
-  <section class="section" id="skills" style="padding-top:0">
+  <section class="section" id="skills">
     <div class="container">
-      <div class="section__head"><h2>技能與背景</h2></div>
+      <div class="head"><h2>Skills</h2><span class="cjk">技能與背景</span></div>
       <div class="facts">
-        {profile.skills.map((g, i) => (
-          <div class:list={['fact', i === 0 && 'fact--ink']}>
-            <h3>{g.group}</h3>
-            <ul>{g.items.map((it) => <li>{it}</li>)}</ul>
-          </div>
+        {profile.skills.map((g) => (
+          <div class="fact"><h3>{g.group}</h3><ul>{g.items.map((it) => <li>{it}</li>)}</ul></div>
         ))}
-        <div class="fact">
-          <h3>學歷</h3>
-          <ul>{profile.education.map((e) => <li>{e.school}<br /><span class="muted">{e.note}</span></li>)}</ul>
-        </div>
-        <div class="fact">
-          <h3>證照</h3>
-          <ul>{profile.certifications.map((c) => <li>{c}</li>)}</ul>
-        </div>
-        <div class="fact">
-          <h3>語言</h3>
-          <ul>{profile.languages.map((l) => <li>{l}</li>)}</ul>
-        </div>
+        <div class="fact"><h3>學歷</h3><ul>{profile.education.map((e) => <li>{e.school}<br /><span class="muted">{e.note}</span></li>)}</ul></div>
+        <div class="fact"><h3>證照</h3><ul>{profile.certifications.map((c) => <li>{c}</li>)}</ul></div>
+        <div class="fact"><h3>語言</h3><ul>{profile.languages.map((l) => <li>{l}</li>)}</ul></div>
       </div>
     </div>
   </section>
 
-  <section class="section contact" id="contact">
+  <section class="section on-ink contact" id="contact">
     <div class="container">
-      <h2>聯絡</h2>
+      <div class="head"><h2>Contact</h2><span class="cjk">聯絡</span></div>
       <a class="contact__mail" href={`mailto:${profile.email}`}>{profile.email}</a>
       <div class="actions">
-        {profile.links.map((l) => <a class="btn" href={l.href} target="_blank" rel="noopener">{l.label}</a>)}
+        {profile.links.map((l) => <a class="btn" href={l.href} target="_blank" rel="noopener">{l.label}<span class="visually-hidden">（在新分頁開啟）</span></a>)}
       </div>
     </div>
   </section>

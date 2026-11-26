@@ -13,10 +13,11 @@ const { title = `${profile.name}｜視覺設計與影音剪輯`, description = p
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header class="nav">
+    <a class="skip" href="#main">跳到主要內容</a>
+    <header class="nav on-ink">
       <div class="container">
         <a class="wordmark" href="/">{profile.name}</a>
         <nav class="nav__links" aria-label="主選單">
@@ -27,8 +28,8 @@ const { title = `${profile.name}｜視覺設計與影音剪輯`, description = p
         </nav>
       </div>
     </header>
-    <main><slot /></main>
-    <footer class="footer">
+    <main id="main"><slot /></main>
+    <footer class="footer on-ink">
       <div class="container">
         <span>{profile.name}</span>
         <span class="muted">© {new Date().getFullYear()}</span>
@@ -36,3 +37,7 @@ const { title = `${profile.name}｜視覺設計與影音剪輯`, description = p
     </footer>
   </body>
 </html>
+
+<style is:global>
+  html, body { overflow-x: clip; }
+</style>
