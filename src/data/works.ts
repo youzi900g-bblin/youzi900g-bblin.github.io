@@ -183,6 +183,63 @@ export const works: Work[] = [
       { src: '/works/jester-icon.jpg', alt: '小丑貓大頭圖：閉著眼微笑，拼布帽左淺灰右深灰，帽上有米黃與暗紅星星', w: 1000, h: 1333 },
     ],
   },
+  {
+    slug: 'bb-girl',
+    title: 'BB｜圍裙女孩',
+    category: 'illustration',
+    summary: '粉紅、紫與深藍三色的插畫。穿著圍裙、胸前有「BB」名牌的女孩舉著魔杖，周圍有蝴蝶、星芒與植物剪影。',
+    tags: ['Illustration', 'Limited Palette', 'Character'],
+    images: [{ src: '/works/bb-girl.jpg', alt: '粉紅、紫與深藍三色插畫：舉著魔杖、穿圍裙的女孩，周圍有蝴蝶與星芒', w: 1200, h: 1800 }],
+  },
+  {
+    slug: 'portrait-studies',
+    title: '人像習作',
+    category: 'illustration',
+    summary: '三張人像習作：白髮藍眼的半身像、綠色橫紋背景的捲髮女孩，以及米灰色調的男生側臉。',
+    tags: ['Portrait', 'Digital Painting', 'Illustration'],
+    images: [
+      { src: '/works/portrait-a.jpg', alt: '白髮藍眼的半身人像，暖橘色膚色', w: 1100, h: 1466 },
+      { src: '/works/portrait-b.jpg', alt: '綠色橫紋背景前的捲髮女孩，穿米色長洋裝並背著包', w: 1100, h: 1555 },
+      { src: '/works/portrait-c.jpg', alt: '米灰色調的男生人像，蘑菇頭髮型', w: 1100, h: 1100 },
+    ],
+  },
+  {
+    slug: 'rib-print',
+    title: '肋骨｜版畫風插畫',
+    category: 'illustration',
+    summary: '黑白版畫風的插畫。女孩在浴室鏡前舉著手機拍照，胸腔的位置畫成肋骨。',
+    tags: ['Black & White', 'Print Style', 'Illustration'],
+    images: [{ src: '/works/rib-print.jpg', alt: '黑白版畫風插畫：女孩對鏡自拍，胸腔是肋骨，鏡前有牙刷與瓶罐', w: 1200, h: 1600 }],
+  },
+  {
+    slug: 'forget',
+    title: 'forget｜文字與影像',
+    category: 'type',
+    summary: '以 forget 為題的一組文字與影像：模糊故障的手寫字、剪影造型字、缺字重複排列，以及黑色顆粒的抽象影像。',
+    tags: ['Typography', 'Glitch', 'Image'],
+    images: [
+      { src: '/works/forget-2.jpg', alt: '黑底白字的 forget 造型字，中間有載入中的圖示', w: 1200, h: 1200 },
+      { src: '/works/forget-1.jpg', alt: '灰白色模糊故障的手寫字 forget', w: 1200, h: 1200 },
+      { src: '/works/forget-3.jpg', alt: '白底黑字 FORGET，字母被刻意缺漏後重複排列', w: 1200, h: 1200 },
+      { src: '/works/forget-4.jpg', alt: '黑色顆粒的模糊抽象影像', w: 1200, h: 1200 },
+    ],
+  },
+  {
+    slug: 'life-poster',
+    title: 'LIFE｜海報',
+    category: 'graphic',
+    summary: '藍色調的 LIFE 海報。字格裡是海洋的線稿，有魚、鯨與漂浮的垃圾。',
+    tags: ['Poster', 'Illustration', 'Lettering'],
+    images: [{ src: '/works/life.jpg', alt: '藍色 LIFE 海報：字母格中有海洋生物與瓶罐垃圾的白色線稿', w: 1200, h: 1697 }],
+  },
+  {
+    slug: 'birthday-card',
+    title: '生日賀卡',
+    category: 'illustration',
+    summary: '手繪的生日賀卡：一對情侶，女孩抱著綠色小熊，蛋糕上點著蠟燭。',
+    tags: ['Card', 'Portrait', 'Illustration'],
+    images: [{ src: '/works/birthday.jpg', alt: 'Happy Birthday 賀卡插畫：女孩抱著綠色小熊，男孩伸手輕點她的臉頰', w: 1200, h: 1800 }],
+  },
 ];
 
 export const featuredSlugs = ['stock-comeback', 'range-rover-video', 'illustration', 'infection', 'xmas-wonderland', 'ugly-doll'];

@@ -251,7 +251,9 @@ a { text-decoration-color: var(--color-accent); }
 
 /* more about me */
 .me-head { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-3xl) var(--gap-columns); align-items: center; }
-.me-portrait { --tilt: 1.2deg; margin: 0; max-width: 420px; justify-self: end; }
+.me-photos { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-lg); align-items: start; justify-self: end; max-width: 640px; }
+.me-portrait { --tilt: 1.2deg; margin: 0; }
+.me-mirror { --tilt: -1.4deg; margin: var(--space-2xl) 0 0; }
 .bw__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-md); }
 .bw__grid li { overflow: hidden; background: var(--color-deep); }
 .bw__grid img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
@@ -273,3 +275,14 @@ a { text-decoration-color: var(--color-accent); }
 .story .container { position: relative; z-index: var(--z-base); }
 .story__cat { position: absolute; right: max(3vw, 16px); bottom: -2%; width: min(30vw, 400px); height: auto; opacity: 0.08; rotate: -5deg; pointer-events: none; }
 @media (max-width: 40rem) { .story__cat { display: none; } }
+
+.oil { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 3fr); gap: var(--space-xl) var(--gap-columns); align-items: end; margin-top: var(--space-3xl); }
+.oil .sheet { margin: 0; }
+.oil__pair { --tilt: -0.8deg; }
+.oil__easel { --tilt: 1deg; }
+.oil__cap { margin-top: var(--space-lg); }
+@media (max-width: 60rem) {
+  .me-photos { justify-self: start; max-width: 100%; }
+  .oil { grid-template-columns: minmax(0, 1fr); }
+  .oil__easel { max-width: 260px; }
+}

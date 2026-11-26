@@ -24,9 +24,14 @@ const bw = [
           <a class="btn btn--ink" href="/works/">看作品</a>
         </div>
       </div>
-      <figure class="sheet me-portrait">
-        <img src="/me/portrait.webp" alt="林湘儀的正面照片，棕紅色中長髮與黑色眼線" width="1000" height="1285" />
-      </figure>
+      <div class="me-photos">
+        <figure class="sheet me-portrait">
+          <img src="/me/portrait.webp" alt="林湘儀的正面照片，棕紅色中長髮與黑色眼線" width="1000" height="1285" />
+        </figure>
+        <figure class="sheet me-mirror">
+          <img src="/me/mirror.webp" alt="林湘儀戴著黑框眼鏡的鏡子自拍，頸部有紅色花紋貼紙" width="1000" height="1188" />
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -42,14 +47,25 @@ const bw = [
   </section>
 
   <section class="section studio" aria-labelledby="studio-title">
-    <div class="container studio__grid">
-      <div>
-        <div class="head"><h2 id="studio-title">Studio</h2><span class="cjk">畫室</span><Sparkle class="spark spark--head" size={22} /></div>
-        <p class="lead">在畫室的畫架前，畫一顆心臟。</p>
+    <div class="container">
+      <div class="studio__grid">
+        <div>
+          <div class="head"><h2 id="studio-title">Studio</h2><span class="cjk">畫室</span><Sparkle class="spark spark--head" size={22} /></div>
+          <p class="lead">在畫室的畫架前，畫一顆心臟。</p>
+        </div>
+        <figure class="sheet studio__photo">
+          <img src="/me/studio.webp" alt="林湘儀在畫室的畫架前作畫，畫布上是一顆被光環繞的心臟" width="1000" height="1776" loading="lazy" />
+        </figure>
       </div>
-      <figure class="sheet studio__photo">
-        <img src="/me/studio.webp" alt="林湘儀在畫室的畫架前作畫，畫布上是一顆被光環繞的心臟" width="1000" height="1776" loading="lazy" />
-      </figure>
+      <div class="oil">
+        <figure class="sheet oil__pair">
+          <img src="/me/oil-pair.jpg" alt="兩幅壓克力畫並排：左邊是森林裡光線照著一把插在石頭上的劍，右邊是黑色星空中被光環繞的心臟，右下角簽名 BBLIN" width="1500" height="844" loading="lazy" />
+        </figure>
+        <figure class="sheet oil__easel">
+          <img src="/me/oil-easel.jpg" alt="畫室的畫架上放著森林與劍的畫" width="900" height="1598" loading="lazy" />
+        </figure>
+      </div>
+      <p class="muted oil__cap">畫室裡的兩幅畫：森林裡的劍，與星空中的心臟。</p>
     </div>
   </section>
 </Layout>
