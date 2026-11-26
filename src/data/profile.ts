@@ -15,6 +15,6 @@ export const profile = {
     { school: '國立台灣師範大學 設計系 平面設計組', note: '大四休學中' },
     { school: '二信高中 廣告設計科', note: '畢業' },
   ],
-  certifications: ['視覺傳達設計丙級技術士', '印前製程 圖文組版 PC 丙級'],
+  certifications: ['視覺傳達設計丙級技術士', '印前製程 圖文組版 PC 丙級', '2021 IOAF 國際海洋藝術節 Special Award'],
   languages: ['中文｜精通', '英語｜TOEIC 880（金色證書）', '台語｜中等'],
 };
