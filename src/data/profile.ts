@@ -2,7 +2,7 @@
 export const profile = {
   name: '林湘儀',
   title: '視覺設計師｜平面・字體・影音',
-  tagline: '以字體與版面為核心的視覺設計，從概念、設計到影片剪輯都能獨立完成。',
+  tagline: '我做平面設計，特別喜歡字體和排版，也會剪影片。',
   email: 'youzi900g@gmail.com',
   phone: '0933-212-386',
   skills: [
