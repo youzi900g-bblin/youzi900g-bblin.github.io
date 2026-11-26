@@ -404,10 +404,10 @@ export const works: Work[] = [
   },
   {
     slug: 'pixel-sprites',
-    title: '像素角色',
+    title: '像素角色｜Overwatch 角色重新設計',
     category: 'illustration',
-    summary: '三個像素風的小角色：持武器的戰士、藍色衣服的角色與背著東西的旅人，是自己創作的像素小人。',
-    tags: ['Pixel Art', 'Character', 'Sprite'],
+    summary: '把遊戲《Overwatch》的三位角色重新設計成像素版，保留各自的武器與配色特徵，用小尺寸的點陣呈現。',
+    tags: ['Pixel Art', 'Redesign', 'Game Character'],
     images: [
       { src: '/works/pixel-sprites.png', alt: '三個像素風小角色並排', w: 1150, h: 500 },
     ],
