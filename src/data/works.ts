@@ -41,7 +41,7 @@ const raw: Work[] = [
     slug: 'range-rover-video',
     title: '興裕汽車音響｜安卓主機安裝宣傳片',
     category: 'video',
-    summary: '為汽車音響店拍的社群宣傳短片，主角是 Land Rover Range Rover Evoque 的安卓多媒體主機安裝。影片先看原廠車機，再看新功能，最後收在店家名稱，賣點用字卡一項項標出來，約 30 秒。',
+    summary: '面試時的作品題目：為汽車音響店拍的社群宣傳短片，主角是 Land Rover Range Rover Evoque 的安卓多媒體主機安裝。影片先看原廠車機，再看新功能，最後收在店家名稱，賣點用字卡一項項標出來，約 30 秒。',
     tags: ['Editing', 'Copywriting', 'Social Video'],
     images: [{ src: '/works/video.jpg', alt: '興裕汽車音響宣傳片：Range Rover 與安卓主機畫面', w: 1400, h: 1083 }],
     links: [{ label: '觀看影片', href: 'https://youtu.be/mCgeZjNUOlA' }],
@@ -100,7 +100,7 @@ const raw: Work[] = [
     slug: 'xmas-wonderland',
     title: '耶誕小鎮｜活動海報',
     category: 'graphic',
-    summary: '臺北流行音樂中心「耶誕小鎮」活動海報。畫面有 2025 的大字和用綠色字組成的聖誕樹，背景是藍到粉的漸層，註明 12/14 到 12/15、免費入場，內容有 DJ 演出、美食餐車和近百攤質感店家。',
+    summary: '以臺北流行音樂中心「耶誕小鎮」為題的模擬活動海報作業。畫面有 2025 的大字和用綠色字組成的聖誕樹，背景是藍到粉的漸層，註明 12/14 到 12/15、免費入場，內容有 DJ 演出、美食餐車和近百攤質感店家。',
     tags: ['Poster', 'Typography', 'Visual Concept'],
     images: [{ src: '/works/xmas.jpg', alt: '2025 耶誕小鎮活動海報', w: 1040, h: 1463 }],
   },
@@ -431,7 +431,7 @@ export const featuredSlugs = ['night-falls', 'stock-comeback', 'yue-rong', 'ioaf
 // 分層：主打作品 → 更多創作（列在作品頁下方）→ 收藏（不列在作品頁，網址仍可進入）。
 // 要把作品升降級，只要在下面兩個清單加減 slug。
 export const moreSlugs = ['visual-experiments', 'forget', 'type-layout-dfa', 'vertical-type-poster', 'ocean-not-bin', 'ocean-heart', 'life-poster', 'ugly-doll', 'jester-cat', 'rib-print'];
-export const archiveSlugs = ['hot-topic', 'colored-pencil', 'sketch-still-life', 'sketch-portrait', 'watercolor', 'illustration', 'portrait-studies', 'characters', 'bb-girl', 'birthday-card', 'marker', 'pixel-sprites'];
+export const archiveSlugs = ['range-rover-video', 'xmas-wonderland', 'hot-topic', 'colored-pencil', 'sketch-still-life', 'sketch-portrait', 'watercolor', 'illustration', 'portrait-studies', 'characters', 'bb-girl', 'birthday-card', 'marker', 'pixel-sprites'];
 const rank = (w: Work) => (archiveSlugs.includes(w.slug) ? 2 : moreSlugs.includes(w.slug) ? 1 : 0);
 const sorted = [...raw].sort((a, b) => rank(a) - rank(b)); // 穩定排序，同層維持原順序
 /** 所有作品（含收藏），用來產生每個作品頁 */
