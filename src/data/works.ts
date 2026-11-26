@@ -288,10 +288,10 @@ export const works: Work[] = [
     summary: '高中時期的色鉛筆習作：瓢蟲、鳳蝶與紫色繡球花，以及只留眼睛與嘴唇的面部局部。',
     tags: ['Colored Pencil', 'Realism', 'Study'],
     images: [
-      { src: '/works/hd-ladybug.jpg', alt: '色鉛筆繪製的瓢蟲，停在綠色松針上', w: 1500, h: 959 },
-      { src: '/works/hd-butterfly.jpg', alt: '色鉛筆繪製的鳳蝶，停在紫色小花上', w: 1500, h: 956 },
-      { src: '/works/hd-hydrangea.jpg', alt: '色鉛筆繪製的紫色繡球花', w: 929, h: 1500 },
-      { src: '/works/hd-eyelip.jpg', alt: '色鉛筆繪製的一隻藍色眼睛與紅色嘴唇', w: 1087, h: 1500 },
+      { src: '/works/hd-ladybug.jpg', alt: '色鉛筆繪製的瓢蟲，停在綠色松針上', w: 1470, h: 941 },
+      { src: '/works/hd-butterfly.jpg', alt: '色鉛筆繪製的鳳蝶，停在紫色小花上', w: 1470, h: 938 },
+      { src: '/works/hd-hydrangea.jpg', alt: '色鉛筆繪製的紫色繡球花', w: 911, h: 1470 },
+      { src: '/works/hd-eyelip.jpg', alt: '色鉛筆繪製的一隻藍色眼睛與紅色嘴唇', w: 1067, h: 1470 },
     ],
   },
   {
@@ -301,8 +301,8 @@ export const works: Work[] = [
     summary: '高中時期的鉛筆素描靜物：瓶罐與玻璃、腳踏車，以及楊桃與小果實。',
     tags: ['Pencil', 'Still Life', 'Study'],
     images: [
-      { src: '/works/hd-still-life.jpg', alt: '鉛筆素描靜物：軟管、噴霧瓶、水瓶、玻璃珠與網狀布', w: 796, h: 1095 },
-      { src: '/works/hd-bike.jpg', alt: '鉛筆素描的腳踏車', w: 1444, h: 1012 },
+      { src: '/works/hd-still-life.jpg', alt: '鉛筆素描靜物：軟管、噴霧瓶、水瓶、玻璃珠與網狀布', w: 782, h: 1075 },
+      { src: '/works/hd-bike.jpg', alt: '鉛筆素描的腳踏車', w: 1416, h: 937 },
       { src: '/works/hd-starfruit.jpg', alt: '鉛筆素描的楊桃與一顆小果實', w: 1083, h: 1500 },
     ],
   },
@@ -313,10 +313,10 @@ export const works: Work[] = [
     summary: '高中時期的鉛筆素描人像與動物：捲髮女孩、長髮女孩、留鬍子的老先生，以及套著繩籠頭的牛。',
     tags: ['Pencil', 'Portrait', 'Study'],
     images: [
-      { src: '/works/hd-girl-curly.jpg', alt: '鉛筆素描：穿著拼色上衣的捲髮女孩', w: 1165, h: 1500 },
-      { src: '/works/hd-girl-long.jpg', alt: '鉛筆素描：長髮女孩的正面肖像', w: 1050, h: 1500 },
-      { src: '/works/hd-old-man.jpg', alt: '鉛筆素描：留鬍子的老先生', w: 1125, h: 1500 },
-      { src: '/works/hd-cow.jpg', alt: '鉛筆素描：套著繩籠頭的牛', w: 1125, h: 1500 },
+      { src: '/works/hd-girl-curly.jpg', alt: '鉛筆素描：穿著拼色上衣的捲髮女孩', w: 1143, h: 1470 },
+      { src: '/works/hd-girl-long.jpg', alt: '鉛筆素描：長髮女孩的正面肖像', w: 1030, h: 1470 },
+      { src: '/works/hd-old-man.jpg', alt: '鉛筆素描：留鬍子的老先生', w: 1103, h: 1470 },
+      { src: '/works/hd-cow.jpg', alt: '鉛筆素描：套著繩籠頭的牛', w: 1103, h: 1470 },
     ],
   },
   {
