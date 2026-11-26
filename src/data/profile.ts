@@ -4,7 +4,7 @@ const portfolioUrl = 'https://www.canva.com/d/S8Nz9mbNgmbGT8J';
 export const profile = {
   name: '林湘儀',
   title: '視覺設計｜影音剪輯｜內容企劃｜AI 製作',
-  tagline: '從企劃、視覺設計到影片剪輯，能獨立完成整件作品。',
+  tagline: '從企劃、視覺設計到影片剪輯，獨立完成整件作品。',
   about: [
     '我是一名設計工作者，從小接觸繪畫，養成觀察細節與探索視覺表現的習慣。進入設計系後，我開始思考設計不只是把畫面做好看，更重要的是如何抓住受眾的注意力。',
     '對我而言，設計是結合創意與溝通的過程。目前我結合插畫、平面設計、影音剪輯與 AI 工具，希望在品牌與行銷專案中，做出真正能被看見、能產生影響的設計。',
@@ -41,14 +41,14 @@ export const profile = {
     },
     {
       title: '字體設計與海報應用',
-      image: '/works/typography.jpg',
+      image: '/works/typography-2.jpg',
       description: '從英文字母、數字到中文字形，整理筆畫與造型並維持一致的視覺特徵，再應用到活動海報與雜誌封面。',
       tags: ['字體設計', '中文字形', '版面編排'],
       href: portfolioUrl,
     },
     {
       title: '平面設計｜海報與品牌延伸',
-      image: '/works/poster-2.jpg',
+      image: '/works/graphic.jpg',
       description: '以 3D 黏土塑像實拍合成呈現面對期限的焦慮；也將品牌概念延伸到菜單、封面與店內視覺。',
       tags: ['海報', '品牌', '插畫'],
       href: portfolioUrl,
@@ -62,7 +62,7 @@ export const profile = {
     },
     {
       title: '編輯設計｜繪本與 Plum Violet 色彩研究',
-      image: '/works/editorial-2.jpg',
+      image: '/works/editorial.jpg',
       description: '繪本傳遞「接納自己」的概念；Plum Violet 研究從色彩特性、歷史、服裝到品牌案例，整理成完整的編輯設計。',
       tags: ['編輯設計', '色彩研究', '版面'],
       href: portfolioUrl,
@@ -71,7 +71,7 @@ export const profile = {
   experience: [
     { period: '2026/9 – 2026/11', role: '網頁維護課 設計助理', org: 'SOGO（專案型職缺）', summary: '製作網頁視覺，依品牌規範與團隊分工，準時交件。' },
     { period: '2025/6 – 2025/8', role: '繪畫老師', org: '靜靜看海藝術工作室', summary: '獨立編排教案，以多媒材帶領 2 到 10 人小班。' },
-    { period: '2024/2 – 2025/6', role: '繪畫助教', org: '星期六畫室', summary: '協助教學與課堂帶領。' },
+    { period: '2024/2 – 2025/6', role: '繪畫助教', org: '星期六畫室', summary: '' },
   ],
   education: [
     { school: '國立台灣師範大學 設計系 平面設計組', note: '大四休學中' },
