@@ -1,0 +1,8 @@
+---
+// 四角閃光星：取自作品集裡《彩色人物插畫》手繪的星星形狀
+interface Props { class?: string; size?: number }
+const { class: cls = '', size = 24 } = Astro.props;
+---
+<svg class={`sparkle ${cls}`} width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path fill="currentColor" d="M12 0C12.9 7.2 16.8 11.1 24 12C16.8 12.9 12.9 16.8 12 24C11.1 16.8 7.2 12.9 0 12C7.2 11.1 11.1 7.2 12 0Z" />
+</svg>

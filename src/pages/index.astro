@@ -1,16 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { profile } from '../data/profile';
+import Sparkle from '../components/Sparkle.astro';
 const pad = (n: number) => String(n).padStart(2, '0');
 ---
 <Layout>
   <section class="hero on-ink" aria-label="首頁">
     <span class="hero__edge">Portfolio, November 2026</span>
     <figure class="hero__photo">
-      <img src="/works/portrait-duo.jpg" alt="林湘儀的自畫像插畫" width="1080" height="780" />
+      <img class="hero__img" src="/works/portrait-duo.jpg" alt="林湘儀的自畫像插畫" width="1080" height="780" />
+      <img class="hero__sig" src="/works/signature.png" alt="" width="456" height="57" />
     </figure>
     <div class="container hero__inner">
       <div class="hero__text">
+        <Sparkle class="spark spark--hero" size={44} />
         <h1 aria-label="Lin Xiang Yi 林湘儀">
           <span class="line">Lin <span class="chip">X</span>iang</span>
           <span class="line">Yi<span class="cjk">林湘儀</span></span>
@@ -49,7 +52,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
   <section class="statement on-ink" aria-label="設計觀">
     <div class="container">
       <div class="statement__side">
-        <span class="plus" aria-hidden="true"></span>
+        <Sparkle class="spark" size={22} />
         <span class="muted">作品集自述</span>
       </div>
       <p class="vertical">設計不只是<br />把畫面做好看，</p>
@@ -58,9 +61,16 @@ const pad = (n: number) => String(n).padStart(2, '0');
   </section>
 
   <section class="section" id="about">
-    <div class="container about">
-      <div class="head" style="margin:0"><h2>About</h2><span class="cjk">關於我</span></div>
-      <div>{profile.about.map((t) => <p>{t}</p>)}</div>
+    <div class="container">
+      <div class="head"><h2>About</h2><span class="cjk">關於我</span></div>
+      <div class="bento">
+        {profile.aboutTiles.map((t, i) => (
+          <figure class:list={['tile', `tile--${'abc'[i]}`]}>
+            <img src={t.image} alt={t.alt} loading="lazy" width={t.size[0]} height={t.size[1]} />
+            <figcaption class="tile__text">{t.text}</figcaption>
+          </figure>
+        ))}
+      </div>
     </div>
   </section>
 
@@ -94,6 +104,8 @@ const pad = (n: number) => String(n).padStart(2, '0');
   </section>
 
   <section class="section on-ink contact" id="contact">
+    <img class="contact__girl" src="/works/girl-cutout.png" alt="" width="700" height="787" loading="lazy" />
+    <Sparkle class="spark spark--contact" size={36} />
     <div class="container">
       <div class="head"><h2>Contact</h2><span class="cjk">聯絡</span></div>
       <a class="contact__mail" href={`mailto:${profile.email}`}>{profile.email}</a>

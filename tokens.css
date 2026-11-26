@@ -9,12 +9,12 @@
   --color-error: oklch(52% 0.19 27); --color-success: oklch(50% 0.12 150);
   --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
   --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
-  --color-paper: oklch(91% 0.018 258); --color-paper-2: oklch(85% 0.026 258); --color-paper-3: oklch(78% 0.034 258); --color-mask: oklch(19% 0.045 262); --color-sheet: oklch(98% 0.006 258);
-  --color-ink: oklch(19% 0.045 262); --color-ink-2: oklch(25% 0.05 262); --color-ink-3: oklch(31% 0.05 262); --color-muted: oklch(41% 0.045 258);
-  --color-on-ink: oklch(93% 0.016 258); --color-on-ink-muted: oklch(75% 0.03 258);
-  --color-rule: oklch(19% 0.045 262); --color-rule-on-ink: oklch(42% 0.04 260);
-  --color-accent: oklch(74% 0.15 45); --color-accent-ink: oklch(19% 0.045 262); --color-focus: oklch(48% 0.17 262); --color-focus-on-ink: oklch(82% 0.12 60);
-  --color-mark: color-mix(in oklab, var(--color-ink) 75%, transparent); --color-mark-on-ink: color-mix(in oklab, var(--color-on-ink) 70%, transparent);
+  --color-paper: oklch(95.5% 0.010 252); --color-paper-2: oklch(91% 0.018 254); --color-paper-3: oklch(86% 0.026 255); --color-sheet: oklch(98.8% 0.004 252);
+  --color-ink: oklch(33% 0.045 258); --color-ink-2: oklch(40% 0.045 258); --color-muted: oklch(48% 0.04 256); --color-mask: oklch(33% 0.045 258);
+  --color-band: oklch(44% 0.05 255); --color-band-2: oklch(50% 0.05 255); --color-on-ink: oklch(97.5% 0.008 252); --color-on-ink-muted: oklch(86% 0.025 252);
+  --color-rule: oklch(33% 0.045 258); --color-rule-on-ink: oklch(62% 0.04 255);
+  --color-accent: oklch(76% 0.17 46); --color-accent-ink: oklch(26% 0.04 258); --color-focus: oklch(50% 0.17 262); --color-focus-on-ink: oklch(84% 0.13 70);
+  --color-mark: color-mix(in oklab, var(--color-ink) 70%, transparent); --color-mark-on-ink: color-mix(in oklab, var(--color-on-ink) 70%, transparent);
   --font-display: "Gloock", "Noto Serif TC", "Songti TC", "PMingLiU", ui-serif, Georgia, serif; --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", ui-sans-serif, system-ui, sans-serif;
   --font-cjk-display: "Noto Serif TC", "Songti TC", "PMingLiU", ui-serif, serif;
   --font-outlier: var(--font-body);

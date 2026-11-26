@@ -5,9 +5,10 @@ export const profile = {
   name: '林湘儀',
   title: '視覺設計｜影音剪輯｜內容企劃｜AI 製作',
   tagline: '從企劃、視覺設計到影片剪輯，獨立完成整件作品。',
-  about: [
-    '我是一名設計工作者，從小接觸繪畫，養成了觀察細節與探索視覺表現的習慣。',
-    '對我而言，設計是結合創意與溝通的過程。目前我結合插畫、平面設計、影音剪輯與 AI 工具，希望在品牌與行銷專案中，做出真正能被看見、能產生影響的設計。',
+  aboutTiles: [
+    { text: '從小接觸繪畫，養成了觀察細節與探索視覺表現的習慣。', image: '/works/crop-pink.jpg', alt: '粉色背景的人物插畫，少女側臉', size: [747, 542] },
+    { text: '設計是結合創意與溝通的過程。', image: '/works/crop-eyes.jpg', alt: '手繪的一雙眼睛，瞳孔是漩渦', size: [546, 299] },
+    { text: '結合插畫、平面設計、影音剪輯與 AI 工具，希望在品牌與行銷專案中，做出真正能被看見、能產生影響的設計。', image: '/works/crop-poster.jpg', alt: '2025 耶誕小鎮活動海報', size: [1040, 1463] },
   ],
   email: 'youzi900g@gmail.com',
   links: [{ label: '完整作品集（Canva）', href: portfolioUrl }],
