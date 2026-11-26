@@ -1,15 +1,10 @@
 // 所有個人內容集中在這裡，改這個檔案即可更新網站
-const portfolioUrl = 'https://www.canva.com/d/S8Nz9mbNgmbGT8J';
+export const portfolioUrl = 'https://www.canva.com/d/S8Nz9mbNgmbGT8J';
 
 export const profile = {
   name: '林湘儀',
   title: '視覺設計｜影音剪輯｜內容企劃｜AI 製作',
   tagline: '從企劃、視覺設計到影片剪輯，獨立完成整件作品。',
-  aboutTiles: [
-    { text: '從小接觸繪畫，養成了觀察細節與探索視覺表現的習慣。', image: '/works/crop-pink.jpg', alt: '粉色背景的人物插畫，少女側臉', size: [747, 542] },
-    { text: '設計是結合創意與溝通的過程。', image: '/works/crop-eyes.jpg', alt: '手繪的一雙眼睛，瞳孔是漩渦', size: [546, 299] },
-    { text: '結合插畫、平面設計、影音剪輯與 AI 工具，希望在品牌與行銷專案中，做出真正能被看見、能產生影響的設計。', image: '/works/crop-poster.jpg', alt: '2025 耶誕小鎮活動海報', size: [1040, 1463] },
-  ],
   email: 'youzi900g@gmail.com',
   links: [{ label: '完整作品集（Canva）', href: portfolioUrl }],
   skills: [
@@ -17,69 +12,6 @@ export const profile = {
     { group: '影音與動態', items: ['After Effects', 'CapCut / 剪映'] },
     { group: '3D', items: ['Blender', '3ds Max'] },
     { group: 'AI', items: ['ChatGPT', 'Midjourney', 'AI 圖像 / 影片 / 文案'] },
-  ],
-  projects: [
-    {
-      title: '股海翻身｜欠債千萬的股市人生',
-      image: '/works/game.jpg',
-      imageSize: [1400, 667],
-      description: '獨立企劃並與 AI 協作開發的網頁遊戲。從故事開場、難度與數值設計，到像素美術、商城與成就系統，完整做出一款可遊玩、可分享的產品。',
-      tags: ['遊戲企劃', '像素美術', 'AI 協作開發'],
-      href: 'https://youzi900g-bblin.github.io/stock-comeback/',
-    },
-    {
-      title: '興裕汽車音響｜安卓主機安裝宣傳片',
-      image: '/works/video.jpg',
-      imageSize: [1400, 1083],
-      description: '為汽車音響店家製作的社群宣傳短片。依「原廠保留 → 新功能展示 → 品牌收尾」安排節奏，用字卡逐一標出賣點，讓車主 30 秒內看懂升級價值。',
-      tags: ['影片剪輯', '文案', '社群影片'],
-      href: 'https://youtu.be/mCgeZjNUOlA',
-    },
-    {
-      title: '動態與影像',
-      image: '/works/motion.jpg',
-      imageSize: [1100, 1006],
-      description: '親手繪製加剪輯的作品，也是第一次接觸 After Effects。透過畫面與音樂的配合放大情感瞬間，反覆調整轉場與節奏。',
-      tags: ['After Effects', '手繪動畫', '剪輯'],
-      href: 'https://youtu.be/att5Oh_z01g',
-    },
-    {
-      title: '字體設計與海報應用',
-      image: '/works/typography.jpg',
-      imageSize: [1400, 1086],
-      description: '從英文字母、數字到中文字形，整理筆畫與造型並維持一致的視覺特徵，再應用到活動海報與雜誌封面。',
-      tags: ['字體設計', '中文字形', '版面編排'],
-      href: portfolioUrl,
-    },
-    {
-      title: '平面設計｜海報與品牌延伸',
-      image: '/works/graphic.jpg',
-      imageSize: [1400, 1142],
-      description: '以 3D 黏土塑像實拍合成呈現面對期限的焦慮；也將品牌概念延伸到菜單、封面與店內視覺。',
-      tags: ['海報', '品牌', '插畫'],
-      href: portfolioUrl,
-    },
-    {
-      title: '插畫｜人物與角色',
-      description: '從人物與角色出發，透過線條、色彩與表情呈現不同的個性與情緒。',
-      image: '/works/illustration.jpg',
-      imageSize: [982, 1374],
-      tags: ['插畫', '角色', '線條'],
-      href: portfolioUrl,
-    },
-    {
-      title: '編輯設計｜繪本與 Plum Violet 色彩研究',
-      image: '/works/editorial.jpg',
-      imageSize: [1400, 635],
-      description: '繪本傳遞「接納自己」的概念；Plum Violet 研究從色彩特性、歷史、服裝到品牌案例，整理成完整的編輯設計。',
-      tags: ['編輯設計', '色彩研究', '版面'],
-      href: portfolioUrl,
-    },
-  ],
-  experience: [
-    { period: '2026/9 – 2026/11', role: '網頁維護課 設計助理', org: 'SOGO（專案型職缺）', summary: '製作網頁視覺，依品牌規範與團隊分工，準時交件。' },
-    { period: '2025/6 – 2025/8', role: '繪畫老師', org: '靜靜看海藝術工作室', summary: '獨立編排教案，以多媒材帶領 2 到 10 人小班。' },
-    { period: '2024/2 – 2025/6', role: '繪畫助教', org: '星期六畫室', summary: '' },
   ],
   education: [
     { school: '國立台灣師範大學 設計系 平面設計組', note: '大四休學中' },

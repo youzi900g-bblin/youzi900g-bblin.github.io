@@ -1,0 +1,27 @@
+---
+import { profile, portfolioUrl } from '../data/profile';
+import Sparkle from './Sparkle.astro';
+---
+<footer class="site-footer on-deep" id="contact">
+  <div class="container contact">
+    <div class="contact__text">
+      <div class="head"><h2>Contact</h2><span class="cjk">聯絡</span><Sparkle class="spark spark--head" size={22} /></div>
+      <a class="contact__mail" href={`mailto:${profile.email}`}>{profile.email}</a>
+      <div class="actions">
+        <a class="btn btn--fill" href="/Lin-Xiang-Yi-Resume.pdf" download>下載履歷（PDF）</a>
+        <a class="btn" href={portfolioUrl} target="_blank" rel="noopener">完整作品集（Canva）<span class="visually-hidden">（在新分頁開啟）</span></a>
+      </div>
+    </div>
+    <img class="contact__girl" src="/works/girl-cutout.png" alt="" width="700" height="787" loading="lazy" />
+  </div>
+  <div class="footer__bar">
+    <div class="container footer__row">
+      <span>{profile.name}</span>
+      <nav class="footer__links" aria-label="頁尾">
+        <a href="/works/">作品</a>
+        <a href="/about/">關於</a>
+      </nav>
+      <span class="muted">© {new Date().getFullYear()}</span>
+    </div>
+  </div>
+</footer>

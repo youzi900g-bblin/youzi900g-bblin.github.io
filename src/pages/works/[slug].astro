@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Sparkle from '../../components/Sparkle.astro';
+import { works, categoryLabel } from '../../data/works';
+
+export function getStaticPaths() {
+  return works.map((w, i) => ({
+    params: { slug: w.slug },
+    props: { work: w, index: i, prev: works[(i - 1 + works.length) % works.length], next: works[(i + 1) % works.length] },
+  }));
+}
+const { work, index, prev, next } = Astro.props;
+const pad = (n: number) => String(n).padStart(2, '0');
+const [mainTitle, subTitle] = work.title.split('｜');
+---
+<Layout title={work.title} description={work.summary.slice(0, 110)} image={work.images[0].src}>
+  <section class="section detail">
+    <div class="container">
+      <nav class="crumbs" aria-label="麵包屑">
+        <a href="/works/">作品</a><span aria-hidden="true">/</span><span aria-current="page">{categoryLabel(work.category)}</span>
+      </nav>
+      <div class="detail__grid">
+        <div class="detail__text">
+          <p class="detail__cat"><Sparkle class="spark spark--accent" size={18} />{categoryLabel(work.category)}　{pad(index + 1)} / {pad(works.length)}</p>
+          <h1 class="cjk">
+            <span>{mainTitle}</span>
+            {subTitle && <span class="detail__sub">{subTitle}</span>}
+          </h1>
+          <p class="lead">{work.summary}</p>
+          <ul class="tags" aria-label="使用技能與關鍵字">
+            {work.tags.map((t) => <li>{t}</li>)}
+          </ul>
+          {work.links && (
+            <div class="actions">
+              {work.links.map((l) => <a class="btn btn--fill" href={l.href} target="_blank" rel="noopener">{l.label}<span class="visually-hidden">（在新分頁開啟）</span></a>)}
+            </div>
+          )}
+        </div>
+        <div class="detail__media">
+          {work.images.map((im, i) => (
+            <figure class="sheet sheet--flat">
+              <img src={im.src} alt={im.alt} loading={i === 0 ? 'eager' : 'lazy'} width={im.w} height={im.h} />
+            </figure>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="pager on-ink" aria-label="上一件與下一件作品">
+    <div class="container pager__grid">
+      <a class="pager__link" href={`/works/${prev.slug}/`}>
+        <span class="pager__dir">Previous</span>
+        <span class="pager__title">{prev.title.replace('｜', '｜​')}</span>
+      </a>
+      <a class="pager__all" href="/works/">全部作品</a>
+      <a class="pager__link pager__link--next" href={`/works/${next.slug}/`}>
+        <span class="pager__dir">Next</span>
+        <span class="pager__title">{next.title.replace('｜', '｜​')}</span>
+      </a>
+    </div>
+  </nav>
+</Layout>

@@ -11,7 +11,7 @@
   --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
   --color-paper: oklch(95.5% 0.010 252); --color-paper-2: oklch(91% 0.018 254); --color-paper-3: oklch(86% 0.026 255); --color-sheet: oklch(98.8% 0.004 252);
   --color-ink: oklch(33% 0.045 258); --color-ink-2: oklch(40% 0.045 258); --color-muted: oklch(48% 0.04 256); --color-mask: oklch(33% 0.045 258);
-  --color-band: oklch(44% 0.05 255); --color-band-2: oklch(50% 0.05 255); --color-on-ink: oklch(97.5% 0.008 252); --color-on-ink-muted: oklch(86% 0.025 252);
+  --color-deep: oklch(19% 0.045 262); --color-band: oklch(44% 0.05 255); --color-band-2: oklch(50% 0.05 255); --color-on-ink: oklch(97.5% 0.008 252); --color-on-ink-muted: oklch(86% 0.025 252);
   --color-rule: oklch(33% 0.045 258); --color-rule-on-ink: oklch(62% 0.04 255);
   --color-accent: oklch(76% 0.17 46); --color-accent-ink: oklch(26% 0.04 258); --color-focus: oklch(50% 0.17 262); --color-focus-on-ink: oklch(84% 0.13 70);
   --color-mark: color-mix(in oklab, var(--color-ink) 70%, transparent); --color-mark-on-ink: color-mix(in oklab, var(--color-on-ink) 70%, transparent);

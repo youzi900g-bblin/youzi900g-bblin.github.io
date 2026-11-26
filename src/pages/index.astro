@@ -1,11 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { profile } from '../data/profile';
 import Sparkle from '../components/Sparkle.astro';
+import { profile } from '../data/profile';
+import { works, featuredSlugs, bySlug, categoryLabel } from '../data/works';
+import { timeline } from '../data/timeline';
 const pad = (n: number) => String(n).padStart(2, '0');
+const featured = featuredSlugs.map(bySlug);
+const path = [timeline[0], timeline[1], timeline[2], timeline[4], timeline[5]];
 ---
 <Layout>
-  <section class="hero on-ink" aria-label="首頁">
+  <section class="hero on-deep" aria-label="首頁">
     <span class="hero__edge">Portfolio, November 2026</span>
     <figure class="hero__photo">
       <img class="hero__img" src="/works/portrait-duo.jpg" alt="林湘儀的自畫像插畫" width="1080" height="780" />
@@ -20,39 +24,38 @@ const pad = (n: number) => String(n).padStart(2, '0');
         </h1>
         <p class="lead">{profile.tagline}</p>
         <div class="actions">
-          <a class="btn btn--fill" href="#works">看作品</a>
-          <a class="btn" href={`mailto:${profile.email}`}>寄信給我</a>
+          <a class="btn btn--fill" href="/works/">看作品</a>
+          <a class="btn" href="/about/">關於我</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="works">
+  <section class="section" id="featured">
     <div class="container">
-      <div class="head"><h2>Works</h2><span class="cjk">作品</span></div>
+      <div class="head"><h2>Selected</h2><span class="cjk">精選作品</span><Sparkle class="spark spark--head" size={22} /></div>
       <div class="prints">
-        {profile.projects.map((p, i) => (
+        {featured.map((w, i) => (
           <article class="print">
-            <a href={p.href} target="_blank" rel="noopener">
-              <span class="visually-hidden">開啟作品：</span>
-              {p.image && <figure class="sheet"><img src={p.image} alt={p.title} loading={i < 2 ? 'eager' : 'lazy'} width={p.imageSize?.[0]} height={p.imageSize?.[1]} /></figure>}
+            <a href={`/works/${w.slug}/`}>
+              <figure class="sheet"><img src={w.images[0].src} alt={w.images[0].alt} loading={i < 2 ? 'eager' : 'lazy'} width={w.images[0].w} height={w.images[0].h} /></figure>
               <div class="note">
-                <span class="num">{pad(i + 1)}</span>
-                <h3>{p.title.replace('｜', '｜\u200b')}</h3>
-                <p>{p.description}</p>
-                <p class="muted">{p.tags.join('、')}</p>
+                <span class="num">{pad(works.indexOf(w) + 1)}</span>
+                <h3>{w.title.replace('｜', '｜​')}</h3>
+                <p class="muted">{categoryLabel(w.category)}</p>
               </div>
             </a>
           </article>
         ))}
       </div>
+      <div class="more"><a class="btn btn--ink" href="/works/">看全部 {works.length} 件作品</a></div>
     </div>
   </section>
 
-  <section class="statement on-ink" aria-label="設計觀">
+  <section class="statement on-deep" aria-label="設計觀">
     <div class="container">
       <div class="statement__side">
-        <Sparkle class="spark" size={22} />
+        <Sparkle class="spark spark--accent" size={22} />
         <span class="muted">作品集自述</span>
       </div>
       <p class="vertical">設計不只是<br />把畫面做好看，</p>
@@ -60,58 +63,19 @@ const pad = (n: number) => String(n).padStart(2, '0');
     </div>
   </section>
 
-  <section class="section" id="about">
+  <section class="section" id="story">
     <div class="container">
-      <div class="head"><h2>About</h2><span class="cjk">關於我</span></div>
-      <div class="bento">
-        {profile.aboutTiles.map((t, i) => (
-          <figure class:list={['tile', `tile--${'abc'[i]}`]}>
-            <img src={t.image} alt={t.alt} loading="lazy" width={t.size[0]} height={t.size[1]} />
-            <figcaption class="tile__text">{t.text}</figcaption>
-          </figure>
+      <div class="head"><h2>Story</h2><span class="cjk">我的路</span><Sparkle class="spark spark--head" size={22} /></div>
+      <ol class="path">
+        {path.map((s) => (
+          <li>
+            <span class="path__period">{s.period}</span>
+            <span class="path__title">{s.title}</span>
+          </li>
         ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section on-ink" id="experience">
-    <div class="container">
-      <div class="head"><h2>Experience</h2><span class="cjk">經歷</span></div>
-      <div class="rows">
-        {profile.experience.map((e) => (
-          <div class="row">
-            <div class="row__period">{e.period}</div>
-            <div><h3>{e.role}</h3><span class="muted">{e.org}</span></div>
-            <div>{e.summary}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="skills">
-    <div class="container">
-      <div class="head"><h2>Skills</h2><span class="cjk">技能與背景</span></div>
-      <div class="facts">
-        {profile.skills.map((g) => (
-          <div class="fact"><h3>{g.group}</h3><ul>{g.items.map((it) => <li>{it}</li>)}</ul></div>
-        ))}
-        <div class="fact"><h3>學歷</h3><ul>{profile.education.map((e) => <li>{e.school}<br /><span class="muted">{e.note}</span></li>)}</ul></div>
-        <div class="fact"><h3>證照</h3><ul>{profile.certifications.map((c) => <li>{c}</li>)}</ul></div>
-        <div class="fact"><h3>語言</h3><ul>{profile.languages.map((l) => <li>{l}</li>)}</ul></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section on-ink contact" id="contact">
-    <img class="contact__girl" src="/works/girl-cutout.png" alt="" width="700" height="787" loading="lazy" />
-    <Sparkle class="spark spark--contact" size={36} />
-    <div class="container">
-      <div class="head"><h2>Contact</h2><span class="cjk">聯絡</span></div>
-      <a class="contact__mail" href={`mailto:${profile.email}`}>{profile.email}</a>
-      <div class="actions">
-        {profile.links.map((l) => <a class="btn" href={l.href} target="_blank" rel="noopener">{l.label}<span class="visually-hidden">（在新分頁開啟）</span></a>)}
-      </div>
+      </ol>
+      <p class="lead path__lead">對我而言，設計是結合創意與溝通的過程。目前我結合插畫、平面設計、影音剪輯與 AI 工具，希望在品牌與行銷專案中，做出真正能被看見、能產生影響的設計。</p>
+      <div class="actions"><a class="btn btn--ink" href="/about/">看完整的故事</a></div>
     </div>
   </section>
 </Layout>

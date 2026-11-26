@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sparkle from '../components/Sparkle.astro';
+import { profile } from '../data/profile';
+import { timeline } from '../data/timeline';
+import { bySlug } from '../data/works';
+---
+<Layout title="關於我" description="林湘儀的故事：從畫畫開始，到廣告設計科、師大設計系，以及各項實務經歷。">
+  <section class="section page-head">
+    <div class="container about-head">
+      <div>
+        <div class="head"><h1>About</h1><span class="cjk">關於我</span><Sparkle class="spark spark--head" size={22} /></div>
+        <p class="lead">從小接觸繪畫，養成了觀察細節與探索視覺表現的習慣。對我而言，設計是結合創意與溝通的過程。</p>
+        <div class="actions">
+          <a class="btn btn--fill" href="/Lin-Xiang-Yi-Resume.pdf" download>下載履歷（PDF）</a>
+          <a class="btn btn--ink" href="/works/">看作品</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tl-sec" aria-labelledby="tl-title">
+    <div class="container">
+      <div class="head"><h2 id="tl-title">Timeline</h2><span class="cjk">我的故事</span></div>
+      <ol class="timeline">
+        {timeline.map((s) => {
+          const w = bySlug(s.work);
+          return (
+            <li class="step">
+              <div class="step__period">{s.period}</div>
+              <div class="step__body">
+                <h3>{s.title}</h3>
+                {s.place && <p class="step__place">{s.place}</p>}
+                {s.note && <p>{s.note}</p>}
+              </div>
+              <a class="step__work" href={`/works/${w.slug}/`}>
+                <span class:list={['step__img', w.images[0].w / w.images[0].h > 2 && 'is-wide']}><img src={w.images[0].src} alt="" loading="lazy" width={w.images[0].w} height={w.images[0].h} /></span>
+                <span class="step__cap"><span class="muted">相關作品</span><span>{w.title.replace('｜', '｜​')}</span></span>
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section on-ink" id="skills">
+    <div class="container">
+      <div class="head"><h2>Skills</h2><span class="cjk">能力與證照</span><Sparkle class="spark spark--head" size={22} /></div>
+      <div class="facts">
+        {profile.skills.map((g) => (
+          <div class="fact"><h3>{g.group}</h3><ul>{g.items.map((it) => <li>{it}</li>)}</ul></div>
+        ))}
+        <div class="fact"><h3>學歷</h3><ul>{profile.education.map((e) => <li>{e.school}<br /><span class="muted">{e.note}</span></li>)}</ul></div>
+        <div class="fact"><h3>證照</h3><ul>{profile.certifications.map((c) => <li>{c}</li>)}</ul></div>
+        <div class="fact"><h3>語言</h3><ul>{profile.languages.map((l) => <li>{l}</li>)}</ul></div>
+      </div>
+    </div>
+  </section>
+</Layout>
