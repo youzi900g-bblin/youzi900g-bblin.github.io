@@ -278,7 +278,7 @@ export const works: Work[] = [
     summary: '高中專題。以古代人物為題的仿古 Q 版角色 IP，設定為化妝品品牌。展桌上有黏土公仔、壓克力立牌、識別證套、名片、圓形鐵盒與扇形包裝等周邊，旁邊的說明板整理了標準字、色票與角色設定。',
     tags: ['Character IP', 'Packaging', 'Brand Identity'],
     images: [
-      { src: '/works/yuerong.jpg', alt: '悅容展桌：黏土公仔、壓克力立牌、名片、圓形鐵盒與扇形包裝，背後立著說明板', w: 1125, h: 1500 },
+      { src: '/works/yuerong.jpg', alt: '悅容展桌：黏土公仔、壓克力立牌、識別證套、名片、圓形鐵盒與扇形包裝，後方是說明板', w: 1045, h: 830 },
     ],
   },
   {
@@ -301,7 +301,7 @@ export const works: Work[] = [
     summary: '高中時期的鉛筆素描靜物：瓶罐與玻璃、腳踏車，以及楊桃與小果實。',
     tags: ['Pencil', 'Still Life', 'Study'],
     images: [
-      { src: '/works/hd-still-life.jpg', alt: '鉛筆素描靜物：軟管、噴霧瓶、水瓶、玻璃珠與網狀布', w: 796, h: 1173 },
+      { src: '/works/hd-still-life.jpg', alt: '鉛筆素描靜物：軟管、噴霧瓶、水瓶、玻璃珠與網狀布', w: 796, h: 1095 },
       { src: '/works/hd-bike.jpg', alt: '鉛筆素描的腳踏車', w: 1444, h: 1012 },
       { src: '/works/hd-starfruit.jpg', alt: '鉛筆素描的楊桃與一顆小果實', w: 1083, h: 1500 },
     ],
