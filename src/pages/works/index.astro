@@ -2,36 +2,38 @@
 import Layout from '../../layouts/Layout.astro';
 import Sparkle from '../../components/Sparkle.astro';
 import Icon from '../../components/Icon.astro';
-import { works, categories, categoryLabel } from '../../data/works';
+import { listedWorks, mainWorks, moreWorks, categories, categoryLabel } from '../../data/works';
 const pad = (n: number) => String(n).padStart(2, '0');
-const counts = Object.fromEntries(categories.map((c) => [c.id, c.id === 'all' ? works.length : works.filter((w) => w.category === c.id).length]));
+const counts = Object.fromEntries(categories.map((c) => [c.id, c.id === 'all' ? listedWorks.length : listedWorks.filter((w) => w.category === c.id).length]));
 ---
 <Layout title="作品" description="林湘儀的作品：插畫、平面設計、字體設計、影音動態、遊戲企劃與編輯設計。">
   <section class="section page-head">
     <div class="container">
       <div class="head"><h1>Works</h1><span class="cjk">作品</span><Sparkle class="spark spark--head" size={22} /></div>
       <div class="filters" role="group" aria-label="作品分類">
-        {categories.map((c) => (
+        {categories.filter((c) => counts[c.id] > 0).map((c) => (
           <button type="button" class="chipbtn" data-filter={c.id} aria-pressed={c.id === 'all' ? 'true' : 'false'}><Icon name={c.id} size={18} />{c.label}<span class="chipbtn__n">{counts[c.id]}</span></button>
         ))}
       </div>
-      <p class="muted filter-hint">插畫＝數位繪製；手繪＝紙本（鉛筆、色鉛筆、水彩、麥克筆）。</p>
-      <p class="muted" id="count" aria-live="polite">共 {works.length} 件</p>
+      <p class="muted" id="count" aria-live="polite">共 {listedWorks.length} 件</p>
     </div>
   </section>
 
-  <section class="section grid-sec">
-    <div class="container">
-      <ul class="wgrid">
-        {works.map((w, i) => (
+  {[{ list: mainWorks, off: 0, more: false }, { list: moreWorks, off: mainWorks.length, more: true }].map(({ list, off, more }) => (
+    <section class={more ? 'section grid-sec grid-sec--more' : 'section grid-sec'} data-group={more ? 'more' : 'main'}>
+      <div class="container">
+        {more && <div class="head"><h2>More</h2><span class="cjk">更多創作</span></div>}
+        {more && <p class="muted more-note">較早期或實驗性質的作品與習作。</p>}
+        <ul class="wgrid">
+          {list.map((w, i) => (
           <li class="wcard" data-cat={w.category}>
             <a href={`/works/${w.slug}/`}>
               <span class="wcard__img">
-                <img src={`/works/tiles/${w.slug}.jpg`} alt="" loading={i < 6 ? 'eager' : 'lazy'} width="960" height="720" />
+                <img src={`/works/tiles/${w.slug}.jpg`} alt="" loading={i < 6 && !more ? 'eager' : 'lazy'} width="960" height="720" />
                 <span class="wcard__badge"><Icon name={w.category} size={18} /><span class="visually-hidden">{categoryLabel(w.category)}</span></span>
               </span>
               <span class="wcard__body">
-                <span class="num">{pad(i + 1)}</span>
+                <span class="num">{pad(i + 1 + off)}</span>
                 <span class="wcard__text">
                   <h2>{w.title.replace('｜', '｜​')}</h2>
                   <span class="muted">{categoryLabel(w.category)}</span>
@@ -39,10 +41,11 @@ const counts = Object.fromEntries(categories.map((c) => [c.id, c.id === 'all' ? 
               </span>
             </a>
           </li>
-        ))}
-      </ul>
-    </div>
-  </section>
+          ))}
+        </ul>
+      </div>
+    </section>
+  ))}
 </Layout>
 
 <script>
@@ -53,6 +56,7 @@ const counts = Object.fromEntries(categories.map((c) => [c.id, c.id === 'all' ? 
     let n = 0;
     cards.forEach((c) => { const show = id === 'all' || c.dataset.cat === id; c.hidden = !show; if (show) { n++; c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop'); } });
     buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filter === id)));
+    document.querySelectorAll<HTMLElement>('[data-group]').forEach((g) => { g.hidden = !g.querySelector('.wcard:not([hidden])'); });
     if (count) count.textContent = `共 ${n} 件`;
     history.replaceState(null, '', id === 'all' ? location.pathname : `#${id}`);
   }

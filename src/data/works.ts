@@ -27,7 +27,7 @@ export const categories: { id: 'all' | Category; label: string }[] = [
 ];
 export const categoryLabel = (c: Category) => categories.find((x) => x.id === c)?.label ?? '';
 
-export const works: Work[] = [
+const raw: Work[] = [
   {
     slug: 'stock-comeback',
     title: '股海翻身｜欠債千萬的股市人生',
@@ -426,5 +426,18 @@ export const works: Work[] = [
   },
 ];
 
-export const featuredSlugs = ['ioaf-2021', 'suffocation', 'yue-rong', 'night-falls', 'stock-comeback', 'sketch-portrait'];
+export const featuredSlugs = ['night-falls', 'stock-comeback', 'yue-rong', 'ioaf-2021', 'ah-boo-font', 'one-to-one'];
+
+// 分層：主打作品 → 更多創作（列在作品頁下方）→ 收藏（不列在作品頁，網址仍可進入）。
+// 要把作品升降級，只要在下面兩個清單加減 slug。
+export const moreSlugs = ['visual-experiments', 'forget', 'type-layout-dfa', 'vertical-type-poster', 'ocean-not-bin', 'ocean-heart', 'life-poster', 'ugly-doll', 'jester-cat', 'rib-print'];
+export const archiveSlugs = ['hot-topic', 'colored-pencil', 'sketch-still-life', 'sketch-portrait', 'watercolor', 'illustration', 'portrait-studies', 'characters', 'bb-girl', 'birthday-card', 'marker', 'pixel-sprites'];
+const rank = (w: Work) => (archiveSlugs.includes(w.slug) ? 2 : moreSlugs.includes(w.slug) ? 1 : 0);
+const sorted = [...raw].sort((a, b) => rank(a) - rank(b)); // 穩定排序，同層維持原順序
+/** 所有作品（含收藏），用來產生每個作品頁 */
+export const works: Work[] = sorted;
+export const mainWorks = sorted.filter((w) => rank(w) === 0);
+export const moreWorks = sorted.filter((w) => rank(w) === 1);
+/** 作品頁會列出的作品（主打 + 更多創作） */
+export const listedWorks = [...mainWorks, ...moreWorks];
 export const bySlug = (s: string) => works.find((w) => w.slug === s)!;

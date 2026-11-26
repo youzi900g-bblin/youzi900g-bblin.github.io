@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Sparkle from '../components/Sparkle.astro';
 import { profile } from '../data/profile';
-import { works, featuredSlugs, bySlug, categoryLabel } from '../data/works';
+import { works, listedWorks, featuredSlugs, bySlug, categoryLabel } from '../data/works';
 import { timeline } from '../data/timeline';
 const pad = (n: number) => String(n).padStart(2, '0');
 const featured = featuredSlugs.map(bySlug);
@@ -48,7 +48,7 @@ const path = [timeline[0], timeline[1], timeline[2], timeline[4], timeline[5]];
           </article>
         ))}
       </div>
-      <div class="more"><a class="btn btn--ink" href="/works/">看全部 {works.length} 件作品</a></div>
+      <div class="more"><a class="btn btn--ink" href="/works/">看全部 {listedWorks.length} 件作品</a></div>
     </div>
   </section>
 
