@@ -11,7 +11,7 @@ export interface Step {
 export const timeline: Step[] = [
   { period: '從小', title: '接觸繪畫', note: '自幼喜歡繪畫，後來進入設計領域。', icon: 'pencil', work: 'illustration' },
   { period: '2019 – 2023', title: '廣告設計科', place: '基隆私立二信高級中學', note: '從這個階段開始接觸視覺設計。', icon: 'school', work: 'yue-rong' },
-  { period: '2023 –', title: '設計系 平面設計組', place: '國立台灣師範大學（大四休學中）', note: '大四時因家庭因素，我必須自行負擔生活開銷，因此選擇休學工作。目前計畫日後返校，完成學業。', icon: 'compass', work: 'dead-line' },
+  { period: '2023 – 現在', title: '設計系 平面設計組', place: '國立台灣師範大學（大四休學中）', note: '大四時因家庭因素，我必須自行負擔生活開銷，因此選擇休學工作。目前計畫日後返校，完成學業。', icon: 'compass', work: 'dead-line' },
   { period: '2024/2 – 2025/6', title: '繪畫助教', place: '星期六畫室', note: '教學時自行編排教案，帶領 2 到 10 人的小班。', icon: 'easel', work: 'sketch-portrait' },
   { period: '2025/6 – 2025/8', title: '繪畫老師', place: '靜靜看海藝術工作室', note: '獨立編排教案，以不同媒材帶領 2 到 10 人的小班。', icon: 'easel', work: 'ugly-doll' },
   { period: '2026/9 – 2026/11', title: '設計助理', place: 'SOGO 網頁維護課（專案型職缺）', note: '負責製作網頁視覺，將同一個主視覺依手機、電腦、首頁橫幅、預覽縮圖等規格重新排版，並依品牌規範與團隊分工，準時交件。', icon: 'laptop', work: 'stock-comeback' },

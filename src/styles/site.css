@@ -55,7 +55,7 @@ a { text-decoration-color: var(--color-accent); }
 .hero h1 .line { display: block; }
 .hero h1 .cjk { font-size: 0.5em; margin-left: 0.2em; vertical-align: baseline; }
 .chip { display: inline-block; padding-inline: 0.06em; background: var(--color-accent); color: var(--color-accent-ink); }
-.hero .lead { max-width: 28em; margin-bottom: var(--space-xl); }
+.hero .lead { max-width: 28em; margin-bottom: var(--space-xl); text-wrap: pretty; }
 
 /* sections */
 .section { padding-block: var(--section-gap-s); }
@@ -196,6 +196,7 @@ a { text-decoration-color: var(--color-accent); }
   .hero__photo { width: 100%; opacity: 0.38; }
   .hero__img { -webkit-mask-image: linear-gradient(to bottom, transparent 0, var(--color-mask) 40%); mask-image: linear-gradient(to bottom, transparent 0, var(--color-mask) 40%); }
   .hero__edge { display: none; }
+  .hero .lead { text-shadow: 0 0 14px var(--color-deep), 0 1px 2px var(--color-deep); }
   .prints { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
   .print, .print:nth-child(n) { grid-column: 1; margin-top: 0; }
   .wgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

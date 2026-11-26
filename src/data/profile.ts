@@ -2,7 +2,7 @@
 export const profile = {
   name: '林湘儀',
   title: '視覺設計師｜平面・字體・影音',
-  tagline: '我是林湘儀，從事平面設計、字體設計與影片剪輯。',
+  tagline: '從事平面設計、字體設計與影片剪輯。',
   email: 'youzi900g@gmail.com',
   phone: '0933-212-386',
   skills: [
