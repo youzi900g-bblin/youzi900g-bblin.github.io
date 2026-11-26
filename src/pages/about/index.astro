@@ -1,19 +1,22 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Sparkle from '../components/Sparkle.astro';
-import Icon from '../components/Icon.astro';
-import { profile } from '../data/profile';
-import { timeline } from '../data/timeline';
-import { bySlug } from '../data/works';
+import Layout from '../../layouts/Layout.astro';
+import Sparkle from '../../components/Sparkle.astro';
+import Icon from '../../components/Icon.astro';
+import AboutTabs from '../../components/AboutTabs.astro';
+import { profile } from '../../data/profile';
+import { timeline } from '../../data/timeline';
+import { bySlug } from '../../data/works';
 ---
 <Layout title="關於我" description="林湘儀的故事：從畫畫開始，到廣告設計科、師大設計系，以及各項實務經歷。">
   <section class="section page-head">
     <div class="container about-head">
       <div>
+        <AboutTabs current="story" />
         <div class="head"><h1>About</h1><span class="cjk">關於我</span><Sparkle class="spark spark--head" size={22} /></div>
         <p class="lead">從小接觸繪畫，養成了觀察細節與探索視覺表現的習慣。對我而言，設計是結合創意與溝通的過程。</p>
         <div class="actions">
           <a class="btn btn--fill" href="/Lin-Xiang-Yi-Resume.pdf" download>下載履歷（PDF）</a>
+          <a class="btn btn--ink" href="/about/me/">更多的我</a>
           <a class="btn btn--ink" href="/works/">看作品</a>
         </div>
       </div>

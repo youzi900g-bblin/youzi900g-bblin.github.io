@@ -151,6 +151,34 @@ export const works: Work[] = [
     tags: ['Editorial Design', 'Color Research', 'Layout'],
     images: [{ src: '/works/plum.jpg', alt: 'Plum Violet 色彩研究的封面與目錄', w: 1400, h: 591 }, { src: '/works/plum-pages.jpg', alt: 'Plum Violet 色彩研究的內頁編排', w: 1400, h: 1193 }],
   },
+  {
+    slug: 'type-layout-dfa',
+    title: '文字排版練習｜DEATH FROM ABOVE 1979',
+    category: 'type',
+    summary: '文字排版練習。同一組文字資訊，以斜排、橫排與直排三種方式編排版面。',
+    tags: ['Typography', 'Layout', 'Typesetting'],
+    images: [
+      { src: '/works/dfa-1.jpg', alt: '文字排版練習一：文字斜排，搭配念珠與噪點底圖', w: 1400, h: 1400 },
+      { src: '/works/dfa-2.jpg', alt: '文字排版練習二：文字橫排，搭配星系與噪點底圖', w: 1400, h: 1400 },
+      { src: '/works/dfa-3.jpg', alt: '文字排版練習三：文字直排，搭配花朵與噪點底圖', w: 1400, h: 1400 },
+    ],
+  },
+  {
+    slug: 'sun-still-rises',
+    title: '太陽照常升起｜文字設計海報',
+    category: 'type',
+    summary: '以手寫字體設計的文字海報：「太陽照常升起，請往前走，不要在此停留」，搭配英文 May the flowers bloom again.',
+    tags: ['Lettering', 'Chinese Typography', 'Poster'],
+    images: [{ src: '/works/sun-poster.jpg', alt: '太陽照常升起文字設計海報：藍天與紅日漸層上的白色手寫字', w: 1100, h: 1555 }],
+  },
+  {
+    slug: 'jester-cat',
+    title: '小丑貓｜角色設計',
+    category: 'illustration',
+    summary: '小丑貓的角色設定圖，含線稿草圖與三個不同姿態與表情。',
+    tags: ['Character', 'Illustration'],
+    images: [{ src: '/works/jester-cat.jpg', alt: '小丑貓角色設定圖：灰黑拼布帽與紅色鞋子，三個姿態與一張草稿', w: 1300, h: 1662 }],
+  },
 ];
 
 export const featuredSlugs = ['stock-comeback', 'range-rover-video', 'illustration', 'infection', 'xmas-wonderland', 'ugly-doll'];

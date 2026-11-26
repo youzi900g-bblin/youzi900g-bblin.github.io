@@ -1,12 +1,12 @@
 // 預覽卡產生器：把每件作品印在統一的「打樣稿」版面上，輸出到 public/works/tiles/。
-// 使用方式（需要 Playwright）：node tools/make-tiles.cjs
+// 使用方式（需要 Playwright）：node tools/make-tiles.cjs [slug ...]  不給 slug 就全部重算
 // 作品圖更新後重跑一次即可。作品資料取自 src/data/works.ts。
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 const root = path.resolve(__dirname, '..');
 const src = fs.readFileSync(path.join(root, 'src/data/works.ts'), 'utf8');
-const works = [...src.matchAll(/slug: '([^']+)'[\s\S]*?images: \[\{ src: '([^']+)'/g)].map((m) => ({ slug: m[1], img: m[2] }));
+const works = [...src.matchAll(/slug: '([^']+)'[\s\S]*?images: \[\s*\{ src: '([^']+)'/g)].map((m) => ({ slug: m[1], img: m[2] }));
 
 const BG = [
   { bg: '#081328', ink: '#e8eef7', mute: '#8da0bd', dot: 'rgba(232,238,247,.10)' },   // 深藍黑
@@ -50,11 +50,13 @@ ${sparks}
 </body></html>`;
 }
 
+const only = process.argv.slice(2);
 (async () => {
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1200, height: 900 }, deviceScaleFactor: 1 });
   for (let i = 0; i < works.length; i++) {
     const w = works[i];
+    if (only.length && !only.includes(w.slug)) continue;
     const f = path.join('/tmp', `tile-${w.slug}.html`);
     fs.writeFileSync(f, html(w, i));
     await page.goto('file://' + f, { waitUntil: 'networkidle' });

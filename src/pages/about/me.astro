@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Sparkle from '../../components/Sparkle.astro';
+import AboutTabs from '../../components/AboutTabs.astro';
+
+const bw = [
+  { src: '/me/bw-1.webp', alt: '黑白照片：一隻手抓著頭髮，露出一隻眼睛' },
+  { src: '/me/bw-2.webp', alt: '黑白近拍：嘴唇與牙套' },
+  { src: '/me/bw-3.webp', alt: '黑白近拍：戴著耳環的耳朵與頭髮' },
+  { src: '/me/bw-4.webp', alt: '黑白近拍：頸部與鎖骨的光影' },
+  { src: '/me/bw-5.webp', alt: '黑白近拍：閉上的眼睛與眉毛' },
+  { src: '/me/bw-6.webp', alt: '黑白近拍：身體曲線與陰影' },
+];
+---
+<Layout title="更多的我" description="林湘儀的另一面：照片、黑白影像與畫室。" image="/me/portrait.webp">
+  <section class="section page-head">
+    <div class="container me-head">
+      <div>
+        <AboutTabs current="me" />
+        <div class="head"><h1>More about me</h1><span class="cjk">更多的我</span><Sparkle class="spark spark--head" size={22} /></div>
+        <p class="lead">設計以外的我：照片、黑白影像，還有畫室裡的時間。</p>
+        <div class="actions">
+          <a class="btn btn--ink" href="/about/">我的故事</a>
+          <a class="btn btn--ink" href="/works/">看作品</a>
+        </div>
+      </div>
+      <figure class="sheet me-portrait">
+        <img src="/me/portrait.webp" alt="林湘儀的正面照片，棕紅色中長髮與黑色眼線" width="1000" height="1285" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="section on-deep bw" aria-labelledby="bw-title">
+    <div class="container">
+      <div class="head"><h2 id="bw-title">Black &amp; white</h2><span class="cjk">黑白影像</span><Sparkle class="spark spark--head" size={22} /></div>
+      <ul class="bw__grid">
+        {bw.map((p, i) => (
+          <li><img src={p.src} alt={p.alt} loading={i < 3 ? 'eager' : 'lazy'} width="1200" height="1200" /></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section studio" aria-labelledby="studio-title">
+    <div class="container studio__grid">
+      <div>
+        <div class="head"><h2 id="studio-title">Studio</h2><span class="cjk">畫室</span><Sparkle class="spark spark--head" size={22} /></div>
+        <p class="lead">在畫室的畫架前，畫一顆心臟。</p>
+      </div>
+      <figure class="sheet studio__photo">
+        <img src="/me/studio.webp" alt="林湘儀在畫室的畫架前作畫，畫布上是一顆被光環繞的心臟" width="1000" height="1776" loading="lazy" />
+      </figure>
+    </div>
+  </section>
+</Layout>

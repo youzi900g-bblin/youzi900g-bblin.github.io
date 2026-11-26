@@ -1,0 +1,8 @@
+---
+interface Props { current: 'story' | 'me' }
+const { current } = Astro.props;
+---
+<nav class="tabs" aria-label="關於頁面">
+  <a href="/about/" aria-current={current === 'story' ? 'page' : undefined}>我的故事</a>
+  <a href="/about/me/" aria-current={current === 'me' ? 'page' : undefined}>更多的我</a>
+</nav>
