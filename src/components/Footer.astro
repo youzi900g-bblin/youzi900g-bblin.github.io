@@ -1,5 +1,5 @@
 ---
-import { profile, portfolioUrl } from '../data/profile';
+import { profile } from '../data/profile';
 import Sparkle from './Sparkle.astro';
 ---
 <footer class="site-footer on-deep" id="contact">
@@ -12,9 +12,9 @@ import Sparkle from './Sparkle.astro';
         <Sparkle class="spark spark--contact" size={44} />
         <div class="head"><h2>Contact</h2><span class="cjk">聯絡</span></div>
         <a class="contact__mail" href={`mailto:${profile.email}`}>{profile.email}</a>
+        <p class="contact__tel"><span class="contact__label">電話</span> <a href={`tel:${profile.phone.replace(/-/g, '')}`}>{profile.phone}</a></p>
         <div class="actions">
           <a class="btn btn--fill" href="/Lin-Xiang-Yi-Resume.pdf" download>下載履歷（PDF）</a>
-          <a class="btn" href={portfolioUrl} target="_blank" rel="noopener">完整作品集（Canva）<span class="visually-hidden">（在新分頁開啟）</span></a>
         </div>
       </div>
     </div>

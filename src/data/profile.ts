@@ -1,12 +1,10 @@
 // 所有個人內容集中在這裡，改這個檔案即可更新網站
-export const portfolioUrl = 'https://www.canva.com/d/S8Nz9mbNgmbGT8J';
-
 export const profile = {
   name: '林湘儀',
   title: '視覺設計｜影音剪輯｜內容企劃｜AI 製作',
   tagline: '從企劃、視覺設計到影片剪輯，獨立完成整件作品。',
   email: 'youzi900g@gmail.com',
-  links: [{ label: '完整作品集（Canva）', href: portfolioUrl }],
+  phone: '0933-212-386',
   skills: [
     { group: '設計', items: ['Photoshop', 'Illustrator', 'Canva', 'Procreate'] },
     { group: '影音與動態', items: ['After Effects', 'CapCut / 剪映'] },

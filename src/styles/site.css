@@ -184,6 +184,9 @@ a { text-decoration-color: var(--color-accent); }
 .spark--contact { margin-bottom: var(--space-md); }
 .contact__mail { display: inline-block; font-family: var(--font-display); font-size: clamp(1.75rem, 4.6vw, 4.25rem); line-height: 1.05; letter-spacing: var(--tracking-display); text-decoration-thickness: 3px; text-underline-offset: 0.12em; overflow-wrap: break-word; margin-bottom: var(--space-xl); }
 .contact__mail:hover { color: var(--color-accent); }
+.contact__tel { display: flex; align-items: baseline; gap: var(--space-sm); margin: calc(-1 * var(--space-md)) 0 var(--space-xl); font-family: var(--font-display); font-size: clamp(1.25rem, 2.4vw, 1.75rem); letter-spacing: 0.04em; }
+.contact__label { font-family: var(--font-body); font-size: var(--text-sm); color: var(--color-on-ink-muted); }
+.contact__tel a:hover { color: var(--color-accent); }
 .footer__bar { border-top: 6px solid var(--color-accent); }
 .footer__row { display: flex; justify-content: space-between; align-items: center; gap: var(--gap-columns); flex-wrap: wrap; padding-block: var(--space-lg); }
 .footer__links { display: flex; gap: var(--space-lg); }
@@ -224,7 +227,7 @@ a { text-decoration-color: var(--color-accent); }
 .icon { flex: none; }
 .icon--accent { color: var(--color-accent); }
 
-/* patterns: the owner's own sparkle shape, kept faint */
+/* patterns: pixel sparkle shape, kept faint */
 .page-head { background-image: url("/pattern-sparks-light.svg"); background-size: 420px; background-position: right top; }
 .statement, .site-footer { background-image: url("/pattern-sparks-dark.svg"); background-size: 420px; }
 .hero { background-image: radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--color-on-ink) 9%, transparent) 1.2px, transparent 1.6px); background-size: 28px 28px; }

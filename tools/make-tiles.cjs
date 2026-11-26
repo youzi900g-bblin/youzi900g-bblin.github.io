@@ -14,7 +14,7 @@ const BG = [
   { bg: '#d9e2ed', ink: '#27364c', mute: '#4f5f74', dot: 'rgba(39,54,76,.14)' },      // 淡藍
 ];
 const ACCENT = '#ff9150';
-const sparkPath = 'M12 0C12.9 7.2 16.8 11.1 24 12C16.8 12.9 12.9 16.8 12 24C11.1 16.8 7.2 12.9 0 12C7.2 11.1 11.1 7.2 12 0Z';
+const sparkPath = 'M4 0h1v1h-1zM3 1h3v1h-3zM3 2h3v1h-3zM0 3h9v1h-9zM1 4h7v1h-7zM2 5h5v1h-5zM2 6h5v1h-5zM1 7h3v1h-3zM5 7h3v1h-3zM1 8h2v1h-2zM6 8h2v1h-2z';
 function rng(seed) { let s = seed; return () => (s = (s * 16807) % 2147483647) / 2147483647; }
 
 function html(w, i) {
@@ -22,7 +22,7 @@ function html(w, i) {
   const spots = [[8, 10], [88, 12], [6, 82], [90, 84], [48, 5], [52, 93], [95, 48], [3, 47]];
   const sparks = spots.map(([x, y], k) => {
     const size = 20 + Math.round(r() * 30); const col = k === 0 ? ACCENT : t.mute;
-    return `<svg style="position:absolute;left:${x}%;top:${y}%;width:${size}px;height:${size}px;color:${col};opacity:${k === 0 ? 1 : 0.7}" viewBox="0 0 24 24"><path fill="currentColor" d="${sparkPath}"/></svg>`;
+    return `<svg style="position:absolute;left:${x}%;top:${y}%;width:${size}px;height:${size}px;color:${col};opacity:${k === 0 ? 1 : 0.7}" viewBox="0 0 9 9" shape-rendering="crispEdges"><path fill="currentColor" d="${sparkPath}"/></svg>`;
   }).join('');
   const tilt = ((i % 2 ? 1 : -1) * (0.8 + r() * 1.2)).toFixed(2);
   return `<!doctype html><html><head><meta charset="utf-8">

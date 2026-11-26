@@ -20,7 +20,7 @@ h1 .cjk{font-family:'Noto Serif TC',serif;font-weight:900;font-size:.5em;margin-
 .bar{position:absolute;left:0;right:0;bottom:0;height:10px;background:#ff9150}
 </style></head><body>
 <div class="dots"></div><div class="photo"></div><img class="sig" src="${pub('works/signature.png')}">
-<svg class="spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C12.9 7.2 16.8 11.1 24 12C16.8 12.9 12.9 16.8 12 24C11.1 16.8 7.2 12.9 0 12C7.2 11.1 11.1 7.2 12 0Z"/></svg>
+<svg class="spark" viewBox="0 0 9 9" shape-rendering="crispEdges"><path fill="currentColor" d="M4 0h1v1h-1zM3 1h3v1h-3zM3 2h3v1h-3zM0 3h9v1h-9zM1 4h7v1h-7zM2 5h5v1h-5zM2 6h5v1h-5zM1 7h3v1h-3zM5 7h3v1h-3zM1 8h2v1h-2zM6 8h2v1h-2z"/></svg>
 <h1><span style="display:block">Lin <span class="chip">X</span>iang</span><span style="display:block">Yi<span class="cjk">林湘儀</span></span></h1>
 <div class="tag">視覺設計｜影音剪輯｜內容企劃｜AI 製作</div>
 <div class="sub">youzi900g-bblin.github.io</div><div class="bar"></div></body></html>`;
