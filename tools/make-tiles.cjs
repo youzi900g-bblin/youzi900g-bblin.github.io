@@ -14,7 +14,7 @@ const BG = [
   { bg: '#d9e2ed', ink: '#27364c', mute: '#4f5f74', dot: 'rgba(39,54,76,.14)' },      // 淡藍
 ];
 const ACCENT = '#ff9150';
-const sparkPath = 'M4 0h1v1h-1zM3 1h3v1h-3zM3 2h3v1h-3zM0 3h9v1h-9zM1 4h7v1h-7zM2 5h5v1h-5zM2 6h5v1h-5zM1 7h3v1h-3zM5 7h3v1h-3zM1 8h2v1h-2zM6 8h2v1h-2z';
+const sparkPath = 'M4 0h1v1h-1zM4 1h1v1h-1zM3 2h3v1h-3zM2 3h5v1h-5zM0 4h9v1h-9zM2 5h5v1h-5zM3 6h3v1h-3zM4 7h1v1h-1zM4 8h1v1h-1z';
 function rng(seed) { let s = seed; return () => (s = (s * 16807) % 2147483647) / 2147483647; }
 
 function html(w, i) {
