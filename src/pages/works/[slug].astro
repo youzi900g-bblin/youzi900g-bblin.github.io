@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Sparkle from '../../components/Sparkle.astro';
+import Icon from '../../components/Icon.astro';
 import { works, categoryLabel } from '../../data/works';
 
 export function getStaticPaths() {
@@ -21,7 +21,7 @@ const [mainTitle, subTitle] = work.title.split('｜');
       </nav>
       <div class="detail__grid">
         <div class="detail__text">
-          <p class="detail__cat"><Sparkle class="spark spark--accent" size={18} />{categoryLabel(work.category)}　{pad(index + 1)} / {pad(works.length)}</p>
+          <p class="detail__cat"><Icon name={work.category} size={20} class="icon--accent" />{categoryLabel(work.category)}　{pad(index + 1)} / {pad(works.length)}</p>
           <h1 class="cjk">
             <span>{mainTitle}</span>
             {subTitle && <span class="detail__sub">{subTitle}</span>}

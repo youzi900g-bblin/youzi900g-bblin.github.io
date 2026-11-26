@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Sparkle from '../components/Sparkle.astro';
+import Icon from '../components/Icon.astro';
 import { profile } from '../data/profile';
 import { timeline } from '../data/timeline';
 import { bySlug } from '../data/works';
@@ -27,14 +28,14 @@ import { bySlug } from '../data/works';
           const w = bySlug(s.work);
           return (
             <li class="step">
-              <div class="step__period">{s.period}</div>
+              <div class="step__period"><span class="step__icon"><Icon name={s.icon} size={22} /></span>{s.period}</div>
               <div class="step__body">
                 <h3>{s.title}</h3>
                 {s.place && <p class="step__place">{s.place}</p>}
                 {s.note && <p>{s.note}</p>}
               </div>
               <a class="step__work" href={`/works/${w.slug}/`}>
-                <span class:list={['step__img', w.images[0].w / w.images[0].h > 2 && 'is-wide']}><img src={w.images[0].src} alt="" loading="lazy" width={w.images[0].w} height={w.images[0].h} /></span>
+                <span class="step__img"><img src={`/works/tiles/${w.slug}.jpg`} alt="" loading="lazy" width="1200" height="900" /></span>
                 <span class="step__cap"><span class="muted">相關作品</span><span>{w.title.replace('｜', '｜​')}</span></span>
               </a>
             </li>

@@ -3,7 +3,7 @@ import '../styles/site.css';
 import Footer from '../components/Footer.astro';
 import { profile } from '../data/profile';
 interface Props { title?: string; description?: string; image?: string }
-const { title, description = profile.tagline, image = '/works/portrait-duo.jpg' } = Astro.props;
+const { title, description = profile.tagline, image = '/og.jpg' } = Astro.props;
 const pageTitle = title ? `${title}｜${profile.name}` : `${profile.name}｜視覺設計與影音剪輯`;
 const path = Astro.url.pathname;
 const current = (p: string) => (path === p || path.startsWith(p) ? 'page' : undefined);
@@ -21,6 +21,12 @@ const site = 'https://youzi900g-bblin.github.io';
     <meta property="og:type" content="website" />
     <meta property="og:image" content={`${site}${image}`} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="theme-color" content="#081328" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap" rel="stylesheet" />
