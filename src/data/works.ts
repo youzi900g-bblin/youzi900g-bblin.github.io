@@ -378,12 +378,21 @@ export const works: Work[] = [
     year: '2021',
     title: '海洋藝術節｜Special Award',
     category: 'illustration',
-    summary: '2021 年 IOAF 國際海洋藝術節（Art Star Awards）的 Special Award 作品。一張把海洋畫成心臟，寫著 OCEAN is our heart.；另一張是青綠色的海底，有線稿畫的人形，寫著 THEIR FUTURE? OUR FUTURE.，另附證書。',
+    summary: '2021 年 IOAF 國際海洋藝術節（Art Star Awards）的 Special Award 得獎作品。青綠色的海底有用線稿畫成的人形，眼角掛著一滴淚，上下兩行字是 THEIR FUTURE? 與 OUR FUTURE.，後面附上證書。',
     tags: ['Award', 'Poster', 'Ocean'],
     images: [
-      { src: '/works/ocean-heart.jpg', alt: '藍色海報：以海浪與魚群畫成的心臟，下方寫著 OCEAN is our heart.', w: 990, h: 1400 },
-      { src: '/works/ocean-future.jpg', alt: '深青色海報：海中的線稿人形與魚，寫著 THEIR FUTURE? OUR FUTURE.', w: 785, h: 1185 },
+      { src: '/works/ocean-future.jpg', alt: '深青色海報：海中的線稿人形與魚，寫著 THEIR FUTURE? OUR FUTURE.', w: 776, h: 1141 },
       { src: '/works/ioaf-cert.jpg', alt: 'IOAF 2021 國際海洋藝術節 Special Award 證書', w: 919, h: 1300 },
+    ],
+  },
+  {
+    slug: 'ocean-heart',
+    title: 'OCEAN is our heart.｜海洋心臟海報',
+    category: 'illustration',
+    summary: '藍色海報。心臟的輪廓由海浪和魚群組成，紅與深藍的色塊疊在淺藍的水面上，左下角寫著 OCEAN is our heart.',
+    tags: ['Poster', 'Ocean', 'Illustration'],
+    images: [
+      { src: '/works/ocean-heart.jpg', alt: '藍色海報：以海浪與魚群畫成的心臟，下方寫著 OCEAN is our heart.', w: 990, h: 1400 },
     ],
   },
   {
